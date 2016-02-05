@@ -5,6 +5,6 @@ Accounts.onLogin(function() {
             return FlowRouter.go(redirect);
         }
     } else {
-        return FlowRouter.go(home);
+        return FlowRouter.go('home');
     }
 });

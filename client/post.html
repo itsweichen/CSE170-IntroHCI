@@ -1,0 +1,23 @@
+<template name="post-meal">
+    <div class="container">
+        <form id="post-meal-form" role="form" method="get" action="/add">
+            <h3>Post a Meal</h3>
+            <div class="form-group">
+                <label for="name">Type of food:</label>
+                <input type="text" class="form-control" id="type-of-food" placeholder="Type of food" name="type-of-food">
+            </div>
+            <div class="form-group">
+                <label for="description">Details:</label>
+                <input type="text" class="form-control" id="details" placeholder="Details" name="details">
+            </div>
+            <div class="form-group">
+                <!--<label for="description">Details:</label>-->
+                <!--<input type="text" class="form-control" id="details" placeholder="Details" name="details">-->
+                <span class="btn btn-default btn-file">
+                    Browse <input type="file">
+                </span>
+            </div>
+            <input type="submit" id="submitBtn" class="btn btn-default" value="Post your meal">
+        </form>
+    </div>
+</template>
