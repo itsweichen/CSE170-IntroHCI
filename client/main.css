@@ -19,7 +19,7 @@ body {
   height: auto !important;
   height: 100%;
   margin: 0px auto -60px;
-  padding: 44px 0 60px;
+  padding: 50px 0 60px;
 }
 
 /*top nav*/
@@ -74,4 +74,22 @@ body {
 }
 #roundBtn{
   padding-top: 50px;
+}
+
+/* events */
+.event {
+  height: 100px;
+}
+
+.event-detail .btn-event-action{
+    padding: 10px 50px;
+    font-size: 18px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
+.event-detail .div-event-action{
+  padding: 20px 20px;
 }

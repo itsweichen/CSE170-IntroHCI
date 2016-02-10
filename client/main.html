@@ -1,9 +1,6 @@
 <template name="app-body">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header text-center">
-            <a href="#" class="navbar-brand">eaat</a>
-        </div>
-    </nav>
+   
+    	{{> Template.dynamic template=header}}
 
     <div id="wrap">
         {{> Template.dynamic template=main}}
