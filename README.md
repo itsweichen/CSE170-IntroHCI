@@ -11,9 +11,6 @@ go to http://localhost:3000/ in your browser
 # Deployment:
 
 ```
-curl https://install.meteor.com/ | sh
-git clone https://github.com/wulfmeister/ucsd-hci-team-project
-cd ucsd-hci-team-project
 meteor deploy mysterymeet --settings settings.production.json
 ```
 
