@@ -1,8 +1,10 @@
 <template name="header">
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="navbar-header text-center">
+            {{#if isActiveRoute 'home'}}
+                <p>Home</p>
+            {{/if}}
 	        <a href="#" class="navbar-brand">{{title}}</a>
 	    </div>
 	</nav>
-
 </template>
