@@ -1,32 +1,24 @@
 <template name="chat">
-    <div class="container">
-        <h2>Chat</h2>
-    </div>
-        <ul class="list-group">
-        <a href="/chat/mmHELP">
-          <li class="list-group-item event">
-            <div class="row event">
-                <div class="col-xs-6"><h3>MM</h3></div>
-                <div class="col-xs-6">
-                    <p>Mystery Meet Support Staff</p>
-                </div>
-            </div>
-          </li>
-        </a>
-		
-		
-        <a href="/chat/jim">
-          <li class="list-group-item event">
-            <div class="row event">
-                <div class="col-xs-3"><img src="images/food3.jpg" class="img-responsive"></div>
-                <div class="col-xs-3"><img src="images/food4.jpg" class="img-responsive"></div>
-                <div class="col-xs-6">
-                    <p>Jim</p>
-                </div>
-            </div>
-          </li>
-        </a>
+    {{#if currentUser}}
+        {{> submit_text}}
+    {{/if}}
 
-        </ul>
+    {{> message_list}}
+</template>
 
+<template name="submit_text">
+    <form action="" class="message_form">
+        <input type="text" name="message" placeholder="Enter message" class="textbox">
+        <input type="submit" value="Submit" class="submit">
+    </form>
+</template>
+
+<template name="message_list">
+    <ul class="messages">
+        {{#each messages}}
+            <li>
+                <strong>{{username}}</strong> - {{text}}
+            </li>
+        {{/each}}
+    </ul>
 </template>
