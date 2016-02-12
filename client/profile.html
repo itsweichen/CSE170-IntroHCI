@@ -1,30 +1,24 @@
 <template name="profile">
 	<div class="container event-detail">
-
 		<h2>Profile</h2>
 
-			{{#if currentUser}}
+        {{#if currentUser}}
+            <div class="row">
+                    <div class="col-xs-4">
+                        <img src={{profileUrl}} class="img-responsive">
+                    </div>
 
-				<div class="row">
-						<div class="col-xs-4">
-				    		<img src={{profileUrl}} class="img-responsive">
-						</div>
+                    <div class="col-xs-8">
+                        <h3>{{currentUser.services.facebook.name}}</h3>
+                        <h3>{{currentUser.services.facebook.email}}</h3>
+                    </div>
+            </div>
 
-						<div class="col-xs-8">
-					  		<h3>{{currentUser.services.facebook.name}}</h3>
-					        <h3>{{currentUser.services.facebook.email}}</h3>
-				    	</div>
-			    </div>
-
-		    	<div class="text-center">
-		    		<button id="logout" class="btn btn-default">Logout</button>
-		    	</div>
-		    {{else}}
-		        <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
-		    {{/if}}
-
+            <div class="text-center">
+                <button id="logout" class="btn btn-default">Logout</button>
+            </div>
+        {{else}}
+            <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
+        {{/if}}
 	</div>
-
-
-
 </template>
