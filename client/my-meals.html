@@ -1,0 +1,37 @@
+<template name="my_meals">
+
+<div class="container event-detail">
+	<div class="div-event-action text-center">
+		<a type="button" class="btn btn-primary btn-event-action" href="/post-meal">Post Meal</a>
+	</div>
+</div>
+
+
+	<ul class="list-group">
+
+	    {{#each my_meals}}
+	    	{{> my_meal}}
+	    {{/each}}
+
+    </ul>
+
+
+
+
+</template>
+
+
+<template name="my_meal">
+    <a href="#">
+    <li class="list-group-item event">
+    <div class="row event">
+        <div class="col-xs-3"><img src={{myFoodImg}} class="img-responsive"></div>
+        <div class="col-xs-6">
+            <p>Time: {{time}}</p>
+            <p>Location: {{location}}</p>
+            <!-- <span class={{labelType}}>{{labelContent}}</span> -->
+        </div>
+    </div>
+    </li>
+    </a>
+</template>
