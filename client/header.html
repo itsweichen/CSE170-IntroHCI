@@ -1,21 +1,12 @@
 <template name="header">
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-
-
-
-	        
-
 		<div class="navbar-header text-center">
-	        	{{#if isActiveRoute 'home'}}
-                	<a href="#" class="navbar-brand">M</a>
-                {{else}}
-                	<a id="backBtn"><span class="glyphicon glyphicon-chevron-left"></span></a>
-	        		<a href="#" class="navbar-brand">M</a>
-            	{{/if}}
-	    </div>
-
-	    <div>
-
+            {{#if isActiveRoute 'home'}}
+                <a href="#" class="navbar-brand">M</a>
+            {{else}}
+                <a id="backBtn"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a href="#" class="navbar-brand">M</a>
+            {{/if}}
 	    </div>
 	</nav>
 </template>

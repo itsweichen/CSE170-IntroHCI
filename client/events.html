@@ -3,47 +3,43 @@
     <div class="container">
         <h2>Upcoming</h2>
     </div>
-        <ul class="list-group">
-
-            {{#each events}}
-                {{#if isUpcoming}}
-                    {{> event}}
-                {{/if}}
-            {{/each}}
-
-        </ul>
+    <ul class="list-group">
+        {{#each events}}
+            {{#if isUpcoming}}
+                {{> event}}
+            {{/if}}
+        {{/each}}
+    </ul>
 
 
     <!-- Past -->
-
     <div class="container">
         <h2>Past</h2>
     </div>
-        <ul class="list-group">
+    <ul class="list-group">
 
-            {{#each events}}
-                {{#unless isUpcoming}}
-                    {{> event}}
-                {{/unless}}
-            {{/each}}
+        {{#each events}}
+            {{#unless isUpcoming}}
+                {{> event}}
+            {{/unless}}
+        {{/each}}
 
-        </ul>
-
+    </ul>
 </template>
 
 
 <template name="event">
     <a href={{pageUrl}}>
-    <li class="list-group-item event">
-    <div class="row event">
-        <div class="col-xs-3"><img src={{myFoodImg}} class="img-responsive"></div>
-        <div class="col-xs-3"><img src={{partnerFoodImg}} class="img-responsive"></div>
-        <div class="col-xs-6">
-            <p>Time: {{time}}</p>
-            <p>Location: {{location}}</p>
-            <span class={{labelType}}>{{labelContent}}</span>
-        </div>
-    </div>
-    </li>
+        <li class="list-group-item event">
+            <div class="row event">
+                <div class="col-xs-3"><img src={{myFoodImg}} class="img-responsive"></div>
+                <div class="col-xs-3"><img src={{partnerFoodImg}} class="img-responsive"></div>
+                <div class="col-xs-6">
+                    <p>Time: {{time}}</p>
+                    <p>Location: {{location}}</p>
+                    <span class={{labelType}}>{{labelContent}}</span>
+                </div>
+            </div>
+        </li>
     </a>
 </template>
