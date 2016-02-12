@@ -6,13 +6,16 @@
 	        
 
 		<div class="navbar-header text-center">
-			<a id="backBtn"><span class="glyphicon glyphicon-chevron-left"></span></a>
-	        <a href="#" class="navbar-brand">{{title}}</a>
+	        	{{#if isActiveRoute 'home'}}
+                	<a href="#" class="navbar-brand">M</a>
+                {{else}}
+                	<a id="backBtn"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	        		<a href="#" class="navbar-brand">M</a>
+            	{{/if}}
 	    </div>
 
 	    <div>
 
 	    </div>
 	</nav>
-
 </template>
