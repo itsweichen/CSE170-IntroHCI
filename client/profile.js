@@ -4,8 +4,7 @@ Template.profile.helpers({
 
 Template.profile.events({
     'click #logout': function(){
-        console.log('logout')
-        Accounts.logout()
+        Accounts.logout();
         return FlowRouter.go('login')
     }
 });
