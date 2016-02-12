@@ -5,47 +5,11 @@
     </div>
         <ul class="list-group">
 
-            <a href="/drop">
-              <li class="list-group-item event">
-                <div class="row event">
-                    <div class="col-xs-3"><img src="images/food1.jpg" class="img-responsive"></div>
-                    <div class="col-xs-3"><img src="images/food2.jpg" class="img-responsive"></div>
-                    <div class="col-xs-6">
-                        <p>Time: 1:00pm 02/15/2016</p>
-                        <p>Location: UCSD</p>
-                        <span class="label label-primary">Waiting to drop</span>
-                    </div>
-                </div>
-              </li>
-            </a>
-
-            <a href="/find-your-meal">
-              <li class="list-group-item event">
-                <div class="row event">
-                    <div class="col-xs-3"><img src="images/food1.jpg" class="img-responsive"></div>
-                    <div class="col-xs-3"><img src="images/food3.jpg" class="img-responsive"></div>
-                    <div class="col-xs-6">
-                        <p>Time: 1:30pm 02/18/2016</p>
-                        <p>Location: UCSD</p>
-                        <span class="label label-primary">Find your meal</span>
-                    </div>
-                </div>
-              </li>
-            </a>
-
-            <a href="/drop-wait">
-              <li class="list-group-item event">
-                <div class="row event">
-                    <div class="col-xs-3"><img src="images/food1.jpg" class="img-responsive"></div>
-                    <div class="col-xs-3"><img src="images/food5.jpg" class="img-responsive"></div>
-                    <div class="col-xs-6">
-                        <p>Time: 1:30pm 02/18/2016</p>
-                        <p>Location: UCSD</p>
-                        <span class="label label-success">You dropped. Waiting for other</span>
-                    </div>
-                </div>
-              </li>
-            </a>
+            {{#each events}}
+                {{#if isUpcoming}}
+                    {{> event}}
+                {{/if}}
+            {{/each}}
 
         </ul>
 
@@ -57,20 +21,29 @@
     </div>
         <ul class="list-group">
 
-        <a href="/finish">
-          <li class="list-group-item event">
-            <div class="row event">
-                <div class="col-xs-3"><img src="images/food3.jpg" class="img-responsive"></div>
-                <div class="col-xs-3"><img src="images/food4.jpg" class="img-responsive"></div>
-                <div class="col-xs-6">
-                    <p>Time: 1:00pm 02/15/2016</p>
-                    <p>Location: UCSD</p>
-                    <span class="label label-default">Finished</span>
-                </div>
-            </div>
-          </li>
-        </a>
+            {{#each events}}
+                {{#unless isUpcoming}}
+                    {{> event}}
+                {{/unless}}
+            {{/each}}
 
         </ul>
 
+</template>
+
+
+<template name="event">
+    <a href={{pageUrl}}>
+    <li class="list-group-item event">
+    <div class="row event">
+        <div class="col-xs-3"><img src={{myFoodImg}} class="img-responsive"></div>
+        <div class="col-xs-3"><img src={{partnerFoodImg}} class="img-responsive"></div>
+        <div class="col-xs-6">
+            <p>Time: {{time}}</p>
+            <p>Location: {{location}}</p>
+            <span class={{labelType}}>{{labelContent}}</span>
+        </div>
+    </div>
+    </li>
+    </a>
 </template>
