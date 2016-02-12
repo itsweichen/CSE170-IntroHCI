@@ -1,0 +1,24 @@
+<template name="chat">
+    {{#if currentUser}}
+        {{> submit_text}}
+    {{/if}}
+
+    {{> message_list}}
+</template>
+
+<template name="submit_text">
+    <form action="" class="message_form">
+        <input type="text" name="message" placeholder="Enter message" class="textbox">
+        <input type="submit" value="Submit" class="submit">
+    </form>
+</template>
+
+<template name="message_list">
+    <ul class="messages">
+        {{#each messages}}
+            <li>
+                <strong>{{username}}</strong> - {{text}}
+            </li>
+        {{/each}}
+    </ul>
+</template>
