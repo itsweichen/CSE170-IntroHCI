@@ -1,3 +1,33 @@
+#login-button{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    z-index: 100;
+}
+.login-button{
+    height: 50px;
+    width: 320px;
+}
+.sign-in-text-facebook{
+    font-size: 20px;
+}
+#login-title{
+    color:#FFAE16;
+    position: absolute;
+    top: 20px;
+}
+#login-title h1{
+    font-size: 50px !important;
+}
+.login-container img{
+    margin-top: -50px;
+    /*filter: brightness(50%);*/
+    -webkit-filter: brightness(0.60);
+}
+/*.login-image{*/
+    /*width: 40px;*/
+/*}*/
+
 #backBtn{
     color: white;
 }
