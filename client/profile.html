@@ -1,0 +1,20 @@
+<template name="profile">
+	<div class="container event-detail">
+		<h2>Profile</h2>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <img src={{profileUrl}} class="img-responsive">
+            </div>
+
+            <div class="col-xs-8">
+                <h3>{{currentUser.services.facebook.name}}</h3>
+                <h3>{{currentUser.services.facebook.email}}</h3>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button id="logout" class="btn btn-default">Logout</button>
+        </div>
+	</div>
+</template>
