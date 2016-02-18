@@ -1,6 +1,6 @@
 <template name="postMeal">
     <div class="container">
-        <form id="post-meal-form" role="form" method="get" action="/add">
+        <form id="post-meal-form" role="form">
             <h3>Post a Meal</h3>
             <div class="form-group">
                 <label for="name">Picture of your meal:</label>
@@ -10,25 +10,16 @@
             </div>
 
             <div class="form-group">
-                <label for="name">Name of your meal:</label>
-                <input type="text" class="form-control" id="type-of-food" placeholder="Meal name" name="mealName">
+                <label for="mealName">Name of your meal:</label>
+                <input type="text" class="form-control" placeholder="Meal name" name="mealName">
             </div>
 
-            <!--<div class="form-group">-->
-                <!--<label for="description">Details:</label>-->
-                <!--<input type="text" class="form-control" id="details" placeholder="Details" name="details">-->
-            <!--</div>-->
-
-            <!--<div class="input-group datetimepicker">-->
-                <!--<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>-->
-                <!--<input class="set-due-date form-control" type="text"/>-->
-            <!--</div>-->
             <div class="form-group">
                 <div class='input-group date' id='datetimepicker1'>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
-                    <input type='text' class="form-control" />
+                    <input type='text' class="form-control" name="time"/>
                 </div>
             </div>
             <script type="text/javascript">
