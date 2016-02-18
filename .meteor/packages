@@ -32,3 +32,4 @@ accounts-ui
 accounts-facebook
 service-configuration
 zimme:active-route
+tsega:bootstrap3-datetimepicker
