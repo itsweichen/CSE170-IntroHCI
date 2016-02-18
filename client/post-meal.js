@@ -7,10 +7,11 @@ Template.postMeal.events({
         var name = event.target.mealName.value;
         var time = event.target.time.value;
         var loggedInUserId = Meteor.user()._id;
+        var imageUrl = event.target.imgUrl.value;
 
         // Insert a task into the collection
         Meals.insert({
-            //image: image,
+            image: imageUrl,
             name: name,
             time: time,
             //location: location,
