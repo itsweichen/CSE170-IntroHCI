@@ -6,6 +6,7 @@ Template.postMeal.events({
         // Get value from form element
         var name = event.target.mealName.value;
         var time = event.target.time.value;
+        var loggedInUserId = Meteor.user()._id;
 
         // Insert a task into the collection
         Meals.insert({
@@ -13,6 +14,7 @@ Template.postMeal.events({
             name: name,
             time: time,
             //location: location,
+            user: loggedInUserId
         });
 
         // Clear form
