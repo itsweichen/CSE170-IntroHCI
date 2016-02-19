@@ -5,6 +5,6 @@ Accounts.onLogin(function() {
             return FlowRouter.go(redirect);
         }
     } else {
-        return FlowRouter.go('browse-meals');
+        return FlowRouter.go('browseMeals');
     }
 });
