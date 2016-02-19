@@ -8,7 +8,10 @@ Template.postMeal.events({
         var time = event.target.time.value;
         var loggedInUserId = Meteor.user()._id;
 		var location = event.target.address.value;
-        var imageUrl = event.target.imgUrl.value;
+
+        var imageUrl = "";
+        if(event.target.imgUrl != null)
+            imageUrl = event.target.imgUrl.value;
 
         // Insert a task into the collection
         Meals.insert({
