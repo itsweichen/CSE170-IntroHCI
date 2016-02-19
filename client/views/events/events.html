@@ -29,14 +29,16 @@
 
 
 <template name="event">
-    <a href={{pageUrl}}>
+    <!--Todo: placeholder for dynamic-->
+    <a href="http://localhost:3000/event/JY7dXgBJC3EFDzmfn">
         <li class="list-group-item event">
             <div class="row event">
-                <div class="col-xs-3"><img src={{myFoodImg}} class="img-responsive"></div>
-                <div class="col-xs-3"><img src={{partnerFoodImg}} class="img-responsive"></div>
+                <div class="col-xs-3"><img src={{user1.image}} class="img-responsive"></div>
+                <div class="col-xs-3"><img src={{user2.image}} class="img-responsive"></div>
                 <div class="col-xs-6">
                     <p>Time: {{time}}</p>
                     <p>Location: {{location}}</p>
+                    <!--Todo: fix these:-->
                     <span class={{labelType}}>{{labelContent}}</span>
                 </div>
             </div>

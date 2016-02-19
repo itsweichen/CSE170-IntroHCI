@@ -2,7 +2,7 @@ Meteor.startup(function() {
     if (Meals.find().count() === 0){
         var meals = [
             {
-                image: "images/food1.jpg",
+                image: "images/home.jpg",
                 name: "food1",
                 time: "02/26/2016 12:00 AM",
                 location: "UCSD CSE building",
