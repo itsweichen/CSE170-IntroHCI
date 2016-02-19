@@ -7,13 +7,14 @@ Template.postMeal.events({
         var name = event.target.mealName.value;
         var time = event.target.time.value;
         var loggedInUserId = Meteor.user()._id;
+		var location = event.target.address.value;
 
         // Insert a task into the collection
         Meals.insert({
             //image: image,
             name: name,
             time: time,
-            //location: location,
+            location: location,
             user: loggedInUserId
         });
 
@@ -27,6 +28,7 @@ Template.postMeal.rendered = function () {
     window.onload = function() { 
 
         input = document.getElementById('autocomplete'); 
+		
         autocomplete = new google.maps.places.Autocomplete(input); 
 
         // When the user selects an address from the dropdown, 
