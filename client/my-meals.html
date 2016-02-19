@@ -5,13 +5,11 @@
         </div>
     </div>
 
-    <div class="container">
         <ul class="list-group">
             {{#each my_meals}}
                 {{> my_meal}}
             {{/each}}
         </ul>
-    </div>
 </template>
 
 
@@ -19,7 +17,7 @@
     <a href="#">
         <li class="list-group-item event">
             <div class="row event">
-                <div class="col-xs-3"><img src={{myFoodImg}} class="img-responsive"></div>
+                <div class="col-xs-3"><img src={{image}} class="img-responsive"></div>
 
                 <div class="col-xs-6">
                     <p>Time: {{time}}</p>

@@ -19,12 +19,15 @@ Template.postMeal.events({
             name: name,
             time: time,
             location: location,
-            user: loggedInUserId
+            user: loggedInUserId,
+            createdAt: new Date()
         });
 
         // Clear form
         event.target.mealName.value = "";
         event.target.time.value = "";
+
+        FlowRouter.go("/my-meals");
     },
     "click .upload-img": function (event) {
         console.log("upload btn clicked");
@@ -37,7 +40,6 @@ Template.postMeal.events({
         var imgHiddenInput = "<input type='hidden' name='imgUrl' value="+imgUrl+">";
         $(".upload-img").after(addImgHtml+imgHiddenInput);
         $(".upload-img").remove();
-
     }
 });
 
