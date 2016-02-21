@@ -20,7 +20,7 @@
     font-size: 50px !important;
 }
 .login-container{
-    margin-top: -50px;
+    height: 100%;
    /* filter: brightness(50%);
     -webkit-filter: brightness(0.60);*/
 }
@@ -32,9 +32,10 @@
     color: white;
 }
 
+
 .vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
+  /* min-height: 100%;  Fallback for browsers do NOT support vh unit */
+  /*min-height: 100vh;  These two lines are counted as one :-)       */
 
   display: flex;
   align-items: center;

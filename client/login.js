@@ -8,3 +8,21 @@ Accounts.onLogin(function() {
         return FlowRouter.go('browseMeals');
     }
 });
+
+
+Template.login.onRendered(function () {
+	this.$(".carousel").carousel({
+		interval: false
+	});
+
+	/*
+	$('#myCarousel').on('slide.bs.carousel', function (ev) {
+		var id = ev.relatedTarget.id;
+  		if (id == "last"){
+  			$(".right").remove();
+  		}	
+
+	})
+	*/
+});
+
