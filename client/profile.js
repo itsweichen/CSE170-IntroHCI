@@ -1,5 +1,9 @@
 Template.profile.helpers({
-    profileUrl: "http://graph.facebook.com/" + Meteor.user().services.facebook.id + "/picture/?type=large"
+    profileUrl: function(){
+    	var url = "http://graph.facebook.com/" + Meteor.users.findOne(Meteor.userId())["services"]["facebook"]["id"] + "/picture/?type=large";
+    	return url;
+    } 
+
 });
 
 Template.profile.events({
