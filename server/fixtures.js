@@ -1,29 +1,4 @@
 Meteor.startup(function() {
-    if (Meals.find().count() === 0){
-        var meals = [
-            {
-                image: "images/home.jpg",
-                name: "food1",
-                time: "02/26/2016 12:00 AM",
-                location: "UCSD CSE building",
-                user: "1",
-                createdAt: new Date()
-            }, {
-                image: "images/food1.jpg",
-                name: "food1",
-                time: "02/26/2016 12:00 AM",
-                location: "UCSD Geisel",
-                user: "1",
-                createdAt: new Date()
-            }
-        ];
-        _.each(meals, function(meal) {
-            Meals.insert(meal);
-            console.log("inserted meal" + meal);
-        });
-    }
-
-
     if (Chats.find().count() === 0){
         var chats = [
             {
