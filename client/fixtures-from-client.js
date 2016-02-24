@@ -1,9 +1,8 @@
 Meteor.startup(function () {
     //we need to do this on the client so we can get the current userID
-    if (Meals.find().count() < 1){
-        console.log("found no meals");
+    if (Meals.find().count() === 0){
         Meteor.call('Meals.methods.create', {
-                image:"images/home.jpg",
+                imageURL:"images/home.jpg",
                 name:"foo",
                 time:"foo",
                 createdAt:"foo",
