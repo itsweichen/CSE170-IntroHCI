@@ -47,7 +47,8 @@ Meteor.startup(function() {
         var events = [
             {
                 user1: {
-                    //userID:
+                    //userId:
+                    //mealId:
                     image: "images/food1.jpg",
                     hasDropped: false,
                     hasPickedUp: false,
@@ -55,7 +56,8 @@ Meteor.startup(function() {
                     likedMeal: null
                 },
                 user2: {
-                    //userID:
+                    //userId:
+                    //mealId:
                     image: "images/home.jpg",
                     hasDropped: false,
                     hasPickedUp: false,
@@ -63,7 +65,7 @@ Meteor.startup(function() {
                     likedMeal: null
                 },
                 time: "1:00pm 02/15/2016",
-                location: "32.8800649,-117.236202217",
+                location: "32.8800649, -117.236202217",
                 canceled: false
             }
         ];
