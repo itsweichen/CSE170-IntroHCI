@@ -14,12 +14,13 @@
 
 
 <template name="my_meal">
-    <a href="#">
+    <a href="edit-meal/{{_id}}">
         <li class="list-group-item event">
             <div class="row event">
                 <div class="col-xs-3"><img src={{image}} class="img-responsive"></div>
 
                 <div class="col-xs-6">
+                    <p>Name: {{name}}</p>
                     <p>Time: {{time}}</p>
                     <p>Location: {{location}}</p>
                     <!-- <span class={{labelType}}>{{labelContent}}</span> -->

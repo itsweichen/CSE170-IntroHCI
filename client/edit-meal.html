@@ -1,0 +1,42 @@
+<template name="editMeal">
+    <div class="container">
+        <form id="edit-meal-form" role="form">
+            <h3>Edit your Meal</h3>
+            <div class="form-group">
+                <label for="name">Picture of your meal:</label>
+                <a>
+                    <div><img src={{imgUrl}} height='100px'></div>
+                </a>
+                <!-- <span class="btn btn-default btn-file">
+                    Browse <input type="file">
+                </span> -->
+            </div>
+
+            <div class="form-group">
+                <label for="mealName">Name of your meal:</label>
+                <input type="text" class="form-control" placeholder="Meal name" name="mealName" value={{name}} required>
+            </div>
+
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    <input type='text' class="form-control" name="time" value={{time}} required/>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                });
+            </script>
+
+			<div id="locationField" class="form-group">
+			  <input id="autocomplete" placeholder="Enter your address" type="text" class="form-control" name="address" value={{location}} required>
+			</div>
+			
+            <input type="submit" id="submitBtn" class="btn btn-default" value="Update your meal">
+            <a class="btn btn-default" href="/my-meals">Cancel</a>
+        </form>
+    </div>
+</template>

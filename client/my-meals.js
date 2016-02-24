@@ -11,6 +11,6 @@ Template.my_meals.helpers({
 
     my_meals: function() {
     	//return Meals.find({user: Meteor.user()._id}, {sort: {createdAt: -1}});
-		return Meals.find();
+		return Meals.find({}, {sort: {createdAt: -1}});
     }
 });

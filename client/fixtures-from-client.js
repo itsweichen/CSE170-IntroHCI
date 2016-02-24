@@ -4,7 +4,7 @@ Meteor.startup(function () {
         Meteor.call('Meals.methods.create', {
                 imageURL:"images/home.jpg",
                 name:"foo",
-                time:"foo",
+                time:"02/10/2016 12:00 AM",
                 createdAt:"foo",
                 location:"foo",
                 createdBy: Meteor.userId()
