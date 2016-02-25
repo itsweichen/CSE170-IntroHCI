@@ -1,23 +1,21 @@
-<template name="find-your-meal">
+<template name="findYourMeal">
     <div class="container event-detail">
         <div class="div-event-detail text-center">
             <h3>You both dropped your meals, now go find theirs at the location below!</h3>
         </div>
 
-        <a href="/finish">
-            <div class="div-event-action text-center">
-                <button type="button" class="btn btn-primary btn-event-action">I found their meal and picked it up</button>
-            </div>
-        </a>
+        <div class="div-event-action text-center">
+            <button type="button" class="btn btn-primary btn-event-action" id="findMeal">I found their meal and picked it up</button>
+        </div>
 
         <div class="row">
             <div class="col-xs-6 img-overlay-parent">
-                <img src="images/food1.jpg" class="img-responsive">
+                <img src="/images/food1.jpg" class="img-responsive">
                 <div class="img-overlay text-center"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>
             </div>
 
             <div class="col-xs-6 img-overlay-parent">
-                <img src="images/home.jpg" class="img-responsive">
+                <img src="/images/home.jpg" class="img-responsive">
                 <div class="img-overlay text-center"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>
             </div>
         </div>

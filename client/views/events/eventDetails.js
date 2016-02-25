@@ -13,7 +13,15 @@ Template.eventDetails.events({
 		Events.remove({_id: eventId});
 
 		FlowRouter.go("/events");
-	}
+	},
+	   'click .drop-meal-button': function(){
+       var eventId= FlowRouter.getParam("id");
+       console.log(eventId);
+       Events.update({_id:eventId}, {$set: {status: 2}});
+       // var goUrl = "/event/"+eventId;
+       // console.log("goUrl:"+goUrl)
+       FlowRouter.reload();
+   }
 });
 
 //Template.eventDetails.events({
