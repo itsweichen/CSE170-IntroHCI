@@ -53,12 +53,12 @@ Meteor.startup(function() {
                     hasDropped: false,
                     hasPickedUp: false,
                     askedToChat: false,
-                    likedMeal: null
+                    likedMeal: null,
                 },
                 user2: {
                     //userId:
                     //mealId:
-                    image: "images/home.jpg",
+                    image: "images/food3.jpg",
                     hasDropped: false,
                     hasPickedUp: false,
                     askedToChat: false,
@@ -66,7 +66,8 @@ Meteor.startup(function() {
                 },
                 time: "1:00pm 02/15/2016",
                 location: "32.8800649, -117.236202217",
-                canceled: false
+                canceled: false,
+                isUpcoming: true
             }
         ];
         _.each(events, function(event) {
