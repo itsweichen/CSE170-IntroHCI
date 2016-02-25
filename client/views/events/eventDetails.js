@@ -5,6 +5,17 @@ Template.eventDetails.helpers({
     }
 });
 
+
+Template.eventDetails.events({
+	"click #cancel-event": function(){
+		console.log("cancel this event");
+		var eventId = FlowRouter.getParam("id");
+		Events.remove({_id: eventId});
+
+		FlowRouter.go("/events");
+	}
+});
+
 //Template.eventDetails.events({
 //    'click .drop-meal-button': function(){
 //        var id= FlowRouter.getParam("id");

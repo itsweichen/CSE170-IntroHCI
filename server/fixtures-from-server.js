@@ -58,7 +58,7 @@ Meteor.startup(function() {
                 user2: {
                     //userId:
                     //mealId:
-                    image: "images/food3.jpg",
+                    image: "images/home.jpg",
                     hasDropped: false,
                     hasPickedUp: false,
                     askedToChat: false,
@@ -67,7 +67,8 @@ Meteor.startup(function() {
                 time: "1:00pm 02/15/2016",
                 location: "32.8800649, -117.236202217",
                 canceled: false,
-                isUpcoming: true
+                isUpcoming: true,
+                status: 1 // 1: matched; 2: user1 dropped; 3: user2 dropped; 4: user1 picked up
             }
         ];
         _.each(events, function(event) {
