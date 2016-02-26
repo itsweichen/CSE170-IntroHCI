@@ -27,13 +27,15 @@ Template.submit_text.events({
         // Get value from form element
         var msg = event.target.message.value;
      	var pid = FlowRouter.getParam("partner");
+		
+		var theDate = new Date();
 	
         // Insert a task into the collection
         Messages.insert({
             text: msg,
-            createdAt: new Date(),            // current time
+            createdAt: moment(theDate).calendar(),            // current time
             owner: Meteor.userId(),           // _id of logged in user
-            username: Meteor.user().username,  // username of logged in user
+            username: Meteor.user().profile.name,  // username of logged in user
 			partner: pid
         });
 
