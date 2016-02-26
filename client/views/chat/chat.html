@@ -1,16 +1,19 @@
 <template name="chat">
+	<div class="container event-detail">
    <h2>Chatting with: {{ partnerId }} </h2>  
-  {{#if currentUser}}
-        {{> submit_text}}
-    {{/if}}
 
     {{> message_list}}
+	
+	  {{#if currentUser}}
+        {{> submit_text}}
+    {{/if}}
+	</div>
 </template>
 
 <template name="submit_text">
     <form action="" class="message_form">
-        <input type="text" name="message" placeholder="Enter message" class="textbox" required>
-        <input type="submit" value="Submit" class="submit">
+        <input type="text" name="message" placeholder="Enter message" class="textbox form-control" required>
+        <input type="submit" value="Submit" class="submit btn btn-default">
     </form>
 </template>
 
@@ -18,7 +21,7 @@
     <ul class="messages">
         {{#each messages}}
             <li>
-                <strong>{{username}}</strong> - {{text}}
+                <strong>{{username}}</strong> - {{text}} <br> <small>{{createdAt}}</small>
             </li>
         {{/each}}
     </ul>
