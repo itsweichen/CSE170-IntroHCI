@@ -14,4 +14,14 @@ go to http://localhost:3000/ in your browser
 meteor deploy mysterymeet --settings settings.production.json
 ```
 
-The master branch corresponds to what is (or should be) up at http://eaat.meteor.com/.
+The master branch corresponds to what is (or should be) up at http://mysterymeet.meteor.com/.
+
+
+for grading (only deploy right before assignments are due):
+http://mysterymeet.meteor.com/
+
+for development (deploy whenever for testing):
+http://eaat.meteor.com/
+
+for a/b:
+n/a
