@@ -26,7 +26,7 @@ Template.event.helpers({
 		else
 			return false;
 	},
-	location: function () {
+	showLocation: function () {
 		if (this.status == 3)
 			return true;
 		else
