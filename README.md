@@ -4,17 +4,22 @@
 curl https://install.meteor.com/ | sh
 git clone https://github.com/wulfmeister/ucsd-hci-team-project
 cd ucsd-hci-team-project
-meteor --settings settings.development.json
+meteor --settings settings.localhost.json
 ```
 go to http://localhost:3000/ in your browser
 
 # Deployment:
 
 ```
-meteor deploy mysterymeet --settings settings.production.json
+meteor deploy mysterymeet-dev --settings settings.mysterymeet-dev.json
 ```
 
-The master branch corresponds to what is (or should be) up at http://mysterymeet.meteor.com/.
+The `master` branch corresponds to what is (or should be) up at http://mysterymeet-grading.meteor.com/
+
+Git flow:  
+Make a new branch from from `dev` to work on something  
+When done, merge that branch into `dev` and deploy to `mysterymeet-dev`  
+When ready for grading, merge `dev` branch into `master` and deploy to `mysterymeet-grading`  
 
 localhost:  
 URL: http://localhost:3000/  
