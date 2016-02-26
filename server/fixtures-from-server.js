@@ -49,7 +49,7 @@ Meteor.startup(function() {
                 user1: {
                     //userId:
                     //mealId:
-                    image: "images/food1.jpg",
+                    image: "/images/food1.jpg",
                     hasDropped: false,
                     hasPickedUp: false,
                     askedToChat: false,
@@ -58,7 +58,7 @@ Meteor.startup(function() {
                 user2: {
                     //userId:
                     //mealId:
-                    image: "images/home.jpg",
+                    image: "/images/home.jpg",
                     hasDropped: false,
                     hasPickedUp: false,
                     askedToChat: false,

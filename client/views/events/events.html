@@ -36,10 +36,17 @@
                 <div class="col-xs-3"><img src={{user1.image}} class="img-responsive"></div>
                 <div class="col-xs-3"><img src={{user2.image}} class="img-responsive"></div>
                 <div class="col-xs-6">
-                    <p>Time: {{time}}</p>
-                    <p>Location: {{location}}</p>
+                    {{reminderText}}
+                    <br>
+                    {{#if showTime}}
+                    <b>{{time}}</b>
+                    {{/if}}
+                    {{#if showLocation}}
+                    <b>{{location}}</b>
+                    {{/if}}
+                    <!-- <p>Location: {{location}}</p> -->
                     <!--Todo: fix these:-->
-                    <span class={{labelType}}>{{labelContent}}</span>
+                    <!-- <span class={{labelType}}>{{labelContent}}</span> -->
                 </div>
             </div>
         </li>
