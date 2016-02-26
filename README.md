@@ -16,12 +16,18 @@ meteor deploy mysterymeet --settings settings.production.json
 
 The master branch corresponds to what is (or should be) up at http://mysterymeet.meteor.com/.
 
+local:
+hosted at: http://mysterymeet-grading.meteor.com/
+settings: settings.local.json
 
 for grading (only deploy right before assignments are due):
-http://mysterymeet.meteor.com/
+hosted at: http://mysterymeet-grading.meteor.com/
+settings:
 
 for development (deploy whenever for testing):
-http://eaat.meteor.com/
+hosted at: http://mysterymeet-dev.meteor.com/
+settings: settings.mysterymeet-dev.json
 
 for a/b:
-n/a
+hosted at: http://mysterymeet-ab.meteor.com/
+settings: settings.mysterymeet-ab.json
