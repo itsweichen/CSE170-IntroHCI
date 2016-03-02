@@ -203,6 +203,9 @@ body {
 .event {
   height: 100px;
 }
+.event:hover {
+  background-color: #EEE;
+}
 
 .event-detail .div-event-action{
   padding: 20px 20px;
@@ -294,6 +297,4 @@ body {
   right: 10px;
   transform: translate(-50%, 300%);
 }
-
-
 
