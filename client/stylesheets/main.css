@@ -73,13 +73,13 @@ body {
 .navbar-inner {
   background-color: white;
   text-align: center;
-  border-color: #DDD;
+  border-color: #ccc;
 }
 
 .navbar-brand {
   font-family: 'lorabold', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   padding: 18px 15px 15px 15px;
-  font-size: 18pt;
+  font-size: 15pt;
   color: white !important;
 }
 
@@ -122,13 +122,19 @@ body {
 }
 #bottomNav a {
   font-size:24pt;
-  color:#fff;
+  color:#777;
   text-decoration:none;
 }
 #bottomNav a:hover {
   color:#FF912D;
 }
 
+.navbar-orange {
+  background-color: #fff;
+  border-color: #ccc;
+  border-top-width: 1px;
+  border-style: solid;
+}
 
 /* buttons */
 .btn-circle {
