@@ -326,8 +326,8 @@ h4 { /* used for list itme title */
   line-height: 1.42857143;
   background-color: #fff;
   background-image: none;
-
   outline: none;
+  border-width: 0px;
 }
 
 .form-page {

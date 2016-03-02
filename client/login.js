@@ -15,14 +15,46 @@ Template.login.onRendered(function () {
 		interval: false
 	});
 
-	/*
-	$('#myCarousel').on('slide.bs.carousel', function (ev) {
-		var id = ev.relatedTarget.id;
-  		if (id == "last"){
-  			$(".right").remove();
-  		}	
+  $('#myCarousel').on('slide.bs.carousel', function (ev) {
+    var id = ev.relatedTarget.id;
+    if (id == "intro4"){
+        $(".right").attr("disabled", "disabled");
+        $("#login_intro4_2").delay(1000).animate({"opacity": "1"}, 700);
+        $("#login_intro4_3").delay(2000).animate({"opacity": "1"}, 700);
+        $(".right").removeAttr("disabled");
+    }
+  })
 
-	})
-	*/
 });
+
+/* trying to disable to right button
+Template.login.events({
+    "click .right": function (event) {
+      //console.log(event.target);
+
+      
+    $('#myCarousel').on('slide.bs.carousel', function (ev) {
+      var id = ev.relatedTarget.id;
+      if (id == "intro4"){
+          $(".right").attr("disabled", "disabled");
+          $(".right").delay(2000).removeAttr("disabled");
+      }
+    })
+    
+
+
+
+      if ($(event.target).is("[disabled]")) {
+        console.log("disable carousel right button");
+        event.preventDefault();
+      }
+      else {
+        console.log("not disabled");
+      }
+    }
+  });
+
+*/
+
+
 
