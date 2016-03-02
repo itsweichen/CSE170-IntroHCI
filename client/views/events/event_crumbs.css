@@ -1,11 +1,9 @@
 #crumbs {
-	text-align: center;
-	position: relative;
-
+	width: auto;
 }
 
 #crumbs div{
-	width: 40px;
+	width: 22%;
 	height: 10px;
 }
 
@@ -13,6 +11,7 @@
 		list-style: none;
 		display: inline-table;
 		padding-left: 0px;
+		width: 100%;
 	}
 		#crumbs ul li {
 			display: inline;
