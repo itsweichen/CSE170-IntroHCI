@@ -2,5 +2,10 @@
   "facebook" : {
     "appId": "163911780654173",
     "secret": "2ceeaf315b4591c25149c11215e2e5d6"
+  },
+  "public" : {
+    "analyticsSettings": {
+      "Google Analytics" : {"trackingId": "UA-74529058-4"}
+    }
   }
 }
