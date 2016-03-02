@@ -2,7 +2,6 @@ Template.footer.events({
     'click #bottomNav': function(){
         console.log("clicked footer");
         analytics.track("clicked footer");
-        ga('send', 'event', 'Training', 'Apply', 'Mastering Meteor')
     }
 });
 
