@@ -15,22 +15,27 @@
 
 
 <template name="my_meal">
-    <a href="edit-meal/{{_id}}" class="list">
+    <!-- <a class="list"> -->
         <li class="list-group-item event">
             <div class="row event">
                 <div class="col-xs-3"><img src={{image}} class="img-responsive"></div>
 
-                <div class="col-xs-6">
-                    <p>Name: {{name}}</p>
-                    <p>Time: {{time}}</p>
-                    <p>Location: {{location}}</p>
+                <div class="col-xs-7">
+                    <h4>{{name}}</h4>
+                    <div class="list-item-detail">
+                    <span>{{time}}</span>
+                    <br>
+                    <span>{{location}}</span>
+                    </div>
                     <!-- <span class={{labelType}}>{{labelContent}}</span> -->
+
                 </div>
-
-
+                <div class="col-xs-2">
+                <a href="edit-meal/{{_id}}"><button type="button" class="btn btn-primary btn-edit">EDIT</button></a>
+                </div>
             </div>
-            <span class="glyphicon glyphicon-menu-right list-menu-right"></span>
+            <!-- <span class="glyphicon glyphicon-menu-right list-menu-right"></span> -->
 
         </li>
-    </a>
+    <!-- </a> -->
 </template>
