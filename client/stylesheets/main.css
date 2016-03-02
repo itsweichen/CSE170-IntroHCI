@@ -207,7 +207,7 @@ body {
 
 /* events */
 .event {
-  height: 90px;
+  height: 95px;
 }
 .event:hover {
   background-color: #EEE;
@@ -402,4 +402,13 @@ div.wrap-btn{
   background-color: #fff;
   padding: 15px;
   padding-top: 30px;
+}
+
+/* event list*/
+.event-item-img {
+  transform: translate(-20px, 0px);
+}
+
+.event-item-text {
+  transform: translate(-30px, 0px);
 }

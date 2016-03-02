@@ -8,16 +8,16 @@ Template.events.helpers({
 Template.event.helpers({
 	reminderText: function () {
 		if (this.status == 1) {
-			return "[Phase 1] Be ready to drop your meal at";
+			return "Drop your meal at";
 		}
 		else if (this.status == 2) {
-			return "[Phase 2] You've already dropped! Waiting other to drop...";
+			return "You've already dropped! Waiting other to drop...";
 		}
 		else if (this.status == 3) {
-			return "[Phase 3] Both dropped. Find theirs at";
+			return "Both dropped. Find theirs at";
 		}
 		else if (this.status == 4) {
-			return "[Finished] Click here to give feedback or Request chat!";
+			return "Give feedback or Request chat!";
 		}
 	},
 	showTime: function () {
@@ -31,5 +31,9 @@ Template.event.helpers({
 			return true;
 		else
 			return false;
-	}
+	},
+	statusIs: function(status) {
+    	return this.status.toString() === status;
+  	}
 });
+
