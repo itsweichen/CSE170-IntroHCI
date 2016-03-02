@@ -47,6 +47,7 @@ body {
   height: 100%;
   /*background-color: #FBFFF9;*/
   font-family: 'lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #EEE;
 }
 
 /* Wrapper for page content to push down footer */
@@ -69,8 +70,15 @@ body {
   display: inline-block;
 }
 
+.navbar-inner {
+  background-color: white;
+  text-align: center;
+  border-color: #DDD;
+}
+
 .navbar-brand {
   font-family: 'lorabold', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  padding: 18px 15px 15px 15px;
   font-size: 18pt;
   color: white !important;
 }
@@ -78,28 +86,30 @@ body {
 .navbar-title {
   float: left;
   height: 50px;
-  padding: 15px 15px;
+  padding: 18px 15px 15px 15px;
   font-size: 18px;
   line-height: 20px;
 
   font-size: 18pt;
-  color: white !important;
+  color: #FF912D !important;
 }
 
 #backBtn > .glyphicon {
   position: absolute;
-  top: 9px;
-  left: 3px;
+  top: 13px;
+  left: 8px;
   font-size: 2em;
   font-weight: 10;
+  color: #FF912D;
 }
 
 .navbar-right {
   position: absolute;
-  top: 9px;
-  right: 3px;
+  top: 15px;
+  right: 13px;
   font-size: 1.5em;
   font-weight: 10;
+  color: #FF912D;
 }
 
 /* bottom nav */
@@ -276,3 +286,14 @@ body {
        -moz-border-radius: 3px;
             border-radius: 3px;
 }
+
+
+/* list group */
+.list-menu-right {
+  position: absolute;
+  right: 10px;
+  transform: translate(-50%, 300%);
+}
+
+
+
