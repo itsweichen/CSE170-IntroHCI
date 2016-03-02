@@ -207,7 +207,8 @@ body {
 
 /* events */
 .event {
-  height: 95·px;
+  height: 95px;
+  color: #000;
 }
 .event:hover {
   background-color: #EEE;
@@ -293,6 +294,7 @@ body {
   position: absolute;
   right: 10px;
   transform: translate(-50%, 300%);
+  color: #999;
 }
 
 h4 { /* used for list itme title */
