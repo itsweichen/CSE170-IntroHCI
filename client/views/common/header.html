@@ -1,12 +1,23 @@
 <template name="header">
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="navbar-header text-center">
+		  <div class="navbar-header">
             {{#if isActiveRoute 'browseMeals'}}
-                <a href="#" class="navbar-brand">M</a>
+                <a href="#" class="navbar-brand">MYSTERY MEET</a>
             {{else}}
                 <a id="backBtn"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                <a href="#" class="navbar-brand">M</a>
+                
             {{/if}}
-	    </div>
+
+            {{#if isActiveRoute 'my_meals'}}
+                <a href="#" class="navbar-title">MY MEALS</a>
+                
+            {{/if}}
+            {{#if isActiveRoute 'profile'}}<a href="#" class="navbar-title">PROFILE</a>{{/if}}
+            {{#if isActiveRoute 'chat'}}<a href="#" class="navbar-title">CHAT</a>{{/if}}
+            {{#if isActiveRoute 'events'}}<a href="#" class="navbar-title">EVENTS</a>{{/if}}
+            {{#if isActiveRoute 'event'}}<a href="#" class="navbar-title">EVENT</a>{{/if}}
+
+            </div>
+	   
 	</nav>
 </template>

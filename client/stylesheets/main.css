@@ -60,17 +60,46 @@ body {
 
 /*top nav*/
 .navbar-fixed-top{
-  background-color: #FFAE16;
+  background-color: #FF912D;
+  text-align: center;
 }
 .navbar-header {
   float:none;
-  width:100%;
-  padding:10px;
+  margin: auto;
+  display: inline-block;
 }
+
 .navbar-brand {
-  font-size:20pt;
-  float:none;
+  font-family: 'lorabold', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 18pt;
   color: white !important;
+}
+
+.navbar-title {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+
+  font-size: 18pt;
+  color: white !important;
+}
+
+#backBtn > .glyphicon {
+  position: absolute;
+  top: 9px;
+  left: 3px;
+  font-size: 2em;
+  font-weight: 10;
+}
+
+.navbar-right {
+  position: absolute;
+  top: 9px;
+  right: 3px;
+  font-size: 1.5em;
+  font-weight: 10;
 }
 
 /* bottom nav */
@@ -87,7 +116,7 @@ body {
   text-decoration:none;
 }
 #bottomNav a:hover {
-  color:#FFAE16;
+  color:#FF912D;
 }
 
 
@@ -165,15 +194,6 @@ body {
   height: 100px;
 }
 
-.event-detail .btn-event-action{
-    padding: 10px 50px;
-    font-size: 18px;
-    line-height: normal;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-}
-
 .event-detail .div-event-action{
   padding: 20px 20px;
 }
@@ -220,11 +240,7 @@ body {
     border-radius: 10px;
 }
 
-.navbar-header > a > .glyphicon {
-  position:absolute;
-  left: 2px;
-  font-size: 2em;
-}
+
 
 .upload-img {
   border-style: solid;
@@ -241,3 +257,22 @@ body {
   vertical-align: middle;
 }
 
+/* button redesign*/
+/*
+.btn-primary {
+  background-color: #FFAE16;
+}
+
+.btn-primary {
+  border-bottom: 6px solid #FFAE16;
+}
+*/
+
+.event-detail .btn-event-action{
+    padding: 10px 50px;
+    font-size: 18px;
+    line-height: normal;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+}
