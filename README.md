@@ -26,8 +26,8 @@ URL: http://mysterymeet-dev.herokuapp.com/
 settings: settings.mysterymeet-dev.json
 to deploy:
 ```
-git push heroku dev:master
-heroku config:set METEOR_SETTINGS="$(cat settings.mysterymeet-dev.json)
+git push mysterymeet-dev dev:master
+heroku config:set METEOR_SETTINGS="$(cat settings.mysterymeet-dev.json)" --app mysterymeet-dev
 ```
 
 for grading (only deploy right before assignments are due):
@@ -35,8 +35,8 @@ URL: http://mysterymeet-grading.herokuapp.com/
 settings: settings.mysterymeet-grading.json
 to deploy:
 ```
-git push heroku grading:master
-heroku config:set METEOR_SETTINGS="$(cat settings.mysterymeet-grading.json)
+git push mysterymeet-grading master
+heroku config:set METEOR_SETTINGS="$(cat settings.mysterymeet-grading.json)" --app mysterymeet-grading
 ```
 
 for a/b testing (deploy whenever we're doing a/b sets):
@@ -44,6 +44,6 @@ URL: http://mysterymeet-ab.herokuapp.com/
 settings: settings.mysterymeet-ab.json
 to deploy:
 ```
-git push heroku ab:master
-heroku config:set METEOR_SETTINGS="$(cat settings.mysterymeet-ab.json)
+git push mysterymeet-ab ab:master
+heroku config:set METEOR_SETTINGS="$(cat settings.mysterymeet-ab.json)" --app mysterymeet-ab
 ```
