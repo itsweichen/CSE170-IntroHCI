@@ -31,5 +31,10 @@ Template.editMeal.events({
 		Meals.update({_id:id}, {$set: {name: name, time: time, location: location}});
 
         FlowRouter.go("/my-meals");
+    },
+    "click #delete-meal": function (event) {
+    	var id = FlowRouter.getParam("id");
+    	Meals.remove({_id: id});
+    	FlowRouter.go("/my-meals");
     }
 });
