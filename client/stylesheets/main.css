@@ -33,6 +33,8 @@
 }
 
 
+
+
 .vertical-center {
   /* min-height: 100%;  Fallback for browsers do NOT support vh unit */
   /*min-height: 100vh;  These two lines are counted as one :-)       */
@@ -46,6 +48,8 @@ body {
   /* The html and body elements cannot have any padding or margin. */
   height: 100%;
   /*background-color: #FBFFF9;*/
+  font-family: 'lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #EEE;
 }
 
 /* Wrapper for page content to push down footer */
@@ -59,17 +63,56 @@ body {
 
 /*top nav*/
 .navbar-fixed-top{
-  background-color: #FFAE16;
+  background-color: #FF912D;
+  text-align: center;
 }
 .navbar-header {
   float:none;
-  width:100%;
-  padding:10px;
+  margin: auto;
+  display: inline-block;
 }
+
+.navbar-inner {
+  background-color: white;
+  text-align: center;
+  border-color: #ccc;
+}
+
 .navbar-brand {
-  font-size:20pt;
-  float:none;
+  font-family: 'lorabold', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  padding: 18px 15px 15px 15px;
+  font-size: 15pt;
   color: white !important;
+}
+
+.navbar-title {
+  float: left;
+  height: 50px;
+  padding: 18px 15px 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+
+  font-size: 18pt;
+  color: #FF912D !important;
+}
+
+#backBtn > .glyphicon {
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  font-size: 2em;
+  font-weight: 10;
+  color: #FF912D;
+}
+
+.navbar-right {
+  position: absolute;
+  top: 15px;
+  right: 13px;
+  font-size: 1.5em;
+  font-weight: 10;
+  color: #FF912D;
+  z-index: 1030;
 }
 
 /* bottom nav */
@@ -82,13 +125,19 @@ body {
 }
 #bottomNav a {
   font-size:24pt;
-  color:#fff;
+  color:#777;
   text-decoration:none;
 }
 #bottomNav a:hover {
-  color:#FFAE16;
+  color:#FF912D;
 }
 
+.navbar-orange {
+  background-color: #fff;
+  border-color: #ccc;
+  border-top-width: 1px;
+  border-style: solid;
+}
 
 /* buttons */
 .btn-circle {
@@ -161,21 +210,13 @@ body {
 
 /* events */
 .event {
-  height: 100px;
+  height: 95px;
+  color: #000;
+}
+.event:hover {
+  background-color: #EEE;
 }
 
-.event-detail .btn-event-action{
-    padding: 10px 50px;
-    font-size: 18px;
-    line-height: normal;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-}
-
-.event-detail .div-event-action{
-  padding: 20px 20px;
-}
 
 .gly-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
@@ -219,11 +260,7 @@ body {
     border-radius: 10px;
 }
 
-.navbar-header > a > .glyphicon {
-  position:absolute;
-  left: 2px;
-  font-size: 2em;
-}
+
 
 .upload-img {
   border-style: solid;
@@ -233,6 +270,7 @@ body {
   height: 50px;
   line-height: 43px;
   text-align: center;
+  color: #FF912D;
 }
 
 .upload-img > span {
@@ -240,3 +278,217 @@ body {
   vertical-align: middle;
 }
 
+
+
+
+
+/* list group */
+.list-menu-right {
+  position: absolute;
+  right: 10px;
+  transform: translate(-50%, 300%);
+  color: #999;
+}
+
+.col-xs-7 > h4 { /* used for list itme title */
+  margin: 0px;
+  font-weight: 700;
+  color: black;
+  font-size: 20px;
+}
+
+.user-name > h3 {
+  font-weight: 700;
+}
+
+.list-item-detail{
+  margin-top: 5px;
+  line-height: 20px;
+  color: black;
+}
+
+.btn-edit {
+  background-color: #FF912D;
+  border-color: #FF891B;
+  transform: translate(-25%, 50%);
+  padding: 5px 7px;
+  font-size: 12px;
+}
+
+.btn-navbar-right {
+  background-color: #FF912D;
+  border-color: #FF891B;
+  padding: 5px 7px;
+  font-size: 12px;
+
+  position: fixed;
+  top: 12px;
+  right: 13px;
+  color: #FFF;
+  z-index: 1030;
+}
+
+/* input */
+.form-control-modify {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  background-image: none;
+  outline: none;
+  border-width: 0px;
+}
+
+.form-page {
+  margin-top: 25px;
+}
+
+.form-block {
+  margin-bottom: 25px;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.form-group {
+  margin-bottom: 0px;
+  background-color: #fff;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #CCC;
+}
+
+.form-group.form-group-bottom {
+  border-width: 0px 0px 0px 0px;
+}
+
+.form-group.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.form-control-label{
+  height: 35px;
+  line-height: 35px;
+  white-space: nowrap;
+  margin-bottom: 0px;
+}
+
+div.wrap-btn{
+  padding: 15px;
+  text-align: center;
+}
+
+
+/* button redesign*/
+.btn-primary {
+  background-color: #FF912D;
+  border-color: #FF891B;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #fff;
+  background-color: #B15500;
+  border-color: #B15500;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #B15500;
+  border-color: #B15500;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #B15500;
+  border-color: #B15500;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #fff;
+  background-color: #B15500;
+  border-color: #B15500;
+}
+
+#backBtn > .glyphicon:hover, .navbar-right:hover,
+#backBtn > .glyphicon:active, .navbar-right:active{
+  color: #B15500;
+
+}
+
+.btn-full-width {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+}
+
+/* profile*/
+.img-circle {
+    border-radius: 50%;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-profile {
+  width: 150px;
+  height: 150px;
+}
+
+.profile-block {
+  margin-bottom: 25px;
+  background-color: #fff;
+  padding: 15px;
+  padding-top: 30px;
+}
+
+/* event list*/
+.event-item-img {
+  transform: translate(-20px, 0px);
+}
+
+.event-item-text {
+  transform: translate(-30px, 0px);
+}
+
+#simulate-other-drop {
+  color: #9D9D9D;
+  left:50%;
+}
+
+/* event */
+.event-block {
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.alert-info {
+  color: #555;
+  background-color: #EEE;
+  border-color: #CCC;
+  font-size: 15px;
+}
+
+.btn-feedback {
+  width: 120px;
+  height: 50px;
+  font-size: 30px;
+}

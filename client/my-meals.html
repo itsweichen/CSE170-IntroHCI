@@ -1,11 +1,13 @@
 <template name="my_meals">
+
     <div class="container event-detail">
-        <div class="div-event-action text-center">
+
+        <!-- <div class="div-event-action text-center">
             <a type="button" class="btn btn-primary btn-event-action" href="/post-meal">Post Meal</a>
-        </div>
+        </div> -->
     </div>
 
-        <ul class="list-group">
+        <ul class="list-group" style="padding-top: 20px;">
             {{#each my_meals}}
                 {{> my_meal}}
             {{/each}}
@@ -14,18 +16,27 @@
 
 
 <template name="my_meal">
-    <a href="edit-meal/{{_id}}">
+    <!-- <a class="list"> -->
         <li class="list-group-item event">
             <div class="row event">
                 <div class="col-xs-3"><img src={{image}} class="img-responsive"></div>
 
-                <div class="col-xs-6">
-                    <p>Name: {{name}}</p>
-                    <p>Time: {{time}}</p>
-                    <p>Location: {{location}}</p>
+                <div class="col-xs-7">
+                    <h4>{{name}}</h4>
+                    <div class="list-item-detail">
+                    <span>{{time}}</span>
+                    <br>
+                    <span>{{location}}</span>
+                    </div>
                     <!-- <span class={{labelType}}>{{labelContent}}</span> -->
+
+                </div>
+                <div class="col-xs-2">
+                <a href="edit-meal/{{_id}}"><button type="button" class="btn btn-primary btn-edit">EDIT</button></a>
                 </div>
             </div>
+            <!-- <span class="glyphicon glyphicon-menu-right list-menu-right"></span> -->
+
         </li>
-    </a>
+    <!-- </a> -->
 </template>

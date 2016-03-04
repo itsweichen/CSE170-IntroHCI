@@ -30,6 +30,22 @@ Template.editMeal.events({
 		var id = FlowRouter.getParam("id");
 		Meals.update({_id:id}, {$set: {name: name, time: time, location: location}});
 
-        FlowRouter.go("/my-meals");
+        var notificationId = Notifications.success('MEAL UPDATED!');
+        Meteor.setTimeout(function(){
+            FlowRouter.go("/my-meals");
+            Notifications.remove({ _id: notificationId });
+        }, 500);
+    },
+    "click #delete-meal": function (event) {
+    	event.preventDefault();
+    	var id = FlowRouter.getParam("id");
+    	
+    	var notificationId = Notifications.success('MEAL DELETED!');
+    	Meteor.setTimeout(function(){
+    		FlowRouter.go("/my-meals");
+    		Meals.remove({_id: id});
+    		Notifications.remove({ _id: notificationId });
+    	}, 500);
+    	
     }
 });

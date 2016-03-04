@@ -58,7 +58,7 @@ Meteor.startup(function() {
                 user2: {
                     //userId:
                     //mealId:
-                    image: "/images/home.jpg",
+                    image: "/images/food2.jpg",
                     hasDropped: false,
                     hasPickedUp: false,
                     askedToChat: false,
