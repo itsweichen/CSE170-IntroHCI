@@ -33,9 +33,9 @@ Template.postMeal.events({
     "click .upload-img": function (event) {
         console.log("upload btn clicked");
 
-        var randomImgIndex = Math.floor(Math.random() * 6 + 1);
+        var randomImgIndex = Math.floor(Math.random() * 5 + 1);
 
-        var imgUrl = 'images/food'+randomImgIndex+'.jpg';
+        var imgUrl = '/images/food'+randomImgIndex+'.jpg';
         var addImgHtml = "<div><img src=" + imgUrl + " height='100px'></div>";
         console.log("addImgHtml"+addImgHtml);
         var imgHiddenInput = "<input type='hidden' name='imgUrl' value="+imgUrl+">";
