@@ -492,3 +492,8 @@ div.wrap-btn{
   height: 50px;
   font-size: 30px;
 }
+
+/* browsing */
+#swipeRight > span, #swipeLeft > span {
+  font-size: 35px;
+}
