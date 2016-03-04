@@ -112,6 +112,7 @@ body {
   font-size: 1.5em;
   font-weight: 10;
   color: #FF912D;
+  z-index: 1030;
 }
 
 /* bottom nav */
@@ -307,7 +308,7 @@ h4 { /* used for list itme title */
   font-size: 20px;
 }
 
-h3 {
+.user-name > h3 {
   font-weight: 700;
 }
 
@@ -323,6 +324,19 @@ h3 {
   transform: translate(-25%, 50%);
   padding: 5px 7px;
   font-size: 12px;
+}
+
+.btn-navbar-right {
+  background-color: #FF912D;
+  border-color: #FF891B;
+  padding: 5px 7px;
+  font-size: 12px;
+
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  color: #FFF;
+  z-index: 1030;
 }
 
 /* input */

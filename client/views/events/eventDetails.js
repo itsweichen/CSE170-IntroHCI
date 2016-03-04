@@ -17,7 +17,7 @@ Template.eventDetails.events({
             Notifications.remove({ _id: notificationId });
         }, 500);
 	},
-	'click .drop-meal-button': function(){
+	'click #drop-meal-button': function(){
         var eventId= FlowRouter.getParam("id");
 
         var notificationId = Notifications.success('MEAL DROPPED!');
