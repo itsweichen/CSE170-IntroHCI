@@ -45,6 +45,16 @@ function callback_insert_event(error, result){
             Notifications.remove({ _id: notificationId });
         }, 1000);
 
-	// TODO: need to check if there is an error, later
-	
+	// TODO: need to check if there is an error, later	
 }
+
+
+Template.browseMeals.helpers({
+    homeImgUrl: function(){
+        Meteor.call("SetRanImgUrl");
+        return Session.get("ranImgUrl");
+    }
+});
+
+
+
