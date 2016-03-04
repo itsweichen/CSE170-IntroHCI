@@ -12,7 +12,7 @@ Template.eventDetails.events({
         
         var notificationId = Notifications.success('EVENT CANCELLED!');
         Meteor.setTimeout(function(){
-            //FlowRouter.go("/my-meals");
+            FlowRouter.go("/events");
             Meteor.call('Events.methods.cancel', {id: eventId});
             Notifications.remove({ _id: notificationId });
         }, 500);

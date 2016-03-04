@@ -5,6 +5,7 @@ ul.notifications {
 	padding-left: 20px;
 	padding-right: 20px;
 	color: #CCC;
+    position: fixed;
 }
 
 li.notification.success {
