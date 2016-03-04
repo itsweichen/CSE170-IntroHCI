@@ -24,5 +24,14 @@ Template.finish.events({
         Meteor.setTimeout(function(){
             Notifications.remove({ _id: notificationId });
         }, 500);
+    }, 
+    "click #cancel-event": function(){
+        var eventId = FlowRouter.getParam("id");
+        var notificationId = Notifications.success('EVENT CANCELLED!');
+        Meteor.setTimeout(function(){
+            //FlowRouter.go("/my-meals");
+            Meteor.call('Events.methods.cancel', {id: eventId});
+            Notifications.remove({ _id: notificationId });
+        }, 500);
     }
 });
