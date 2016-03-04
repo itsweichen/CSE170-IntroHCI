@@ -33,8 +33,15 @@ Template.editMeal.events({
         FlowRouter.go("/my-meals");
     },
     "click #delete-meal": function (event) {
+    	event.preventDefault();
     	var id = FlowRouter.getParam("id");
-    	Meals.remove({_id: id});
-    	FlowRouter.go("/my-meals");
+    	
+    	var notificationId = Notifications.success('MEAL DELETED!');
+    	Meteor.setTimeout(function(){
+    		FlowRouter.go("/my-meals");
+    		Meals.remove({_id: id});
+    		Notifications.remove({ _id: notificationId });
+    	}, 500);
+    	
     }
 });
