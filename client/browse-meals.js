@@ -1,10 +1,10 @@
 Template.browseMeals.events({
     'click #swipeRight': function(){
     	// create an event and go to that event
-        Meteor.call("GetRanImgUrl");
-        var img1 = Session.get("GetRanImgUrl");
-        Meteor.call("GetRanImgUrl");
-        var img2 = Session.get("GetRanImgUrl");
+        var randomImgIndex = Math.floor(Math.random() * 5);
+        var img1 = '/images/food'+randomImgIndex+'.jpg';
+        var randomImgIndex2 = randomImgIndex + 1;
+        var img2 = '/images/food'+randomImgIndex2+'.jpg';
     	Events.insert({
     		    user1: {
                     //userId:
