@@ -17,3 +17,10 @@ Template.dropWait.events({
         }, 500);
 	}
 });
+
+Template.dropWait.helpers({
+    event: function(){
+        //console.log(Events.findOne())
+        return Events.findOne()
+    }
+});

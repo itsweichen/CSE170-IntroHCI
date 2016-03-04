@@ -217,9 +217,6 @@ body {
   background-color: #EEE;
 }
 
-.event-detail .div-event-action{
-  padding: 20px 20px;
-}
 
 .gly-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
@@ -283,14 +280,6 @@ body {
 
 
 
-.event-detail .btn-event-action{
-    padding: 10px 50px;
-    font-size: 18px;
-    line-height: normal;
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
-}
 
 
 /* list group */
@@ -301,7 +290,7 @@ body {
   color: #999;
 }
 
-h4 { /* used for list itme title */
+.col-xs-7 > h4 { /* used for list itme title */
   margin: 0px;
   font-weight: 700;
   color: black;
@@ -332,7 +321,7 @@ h4 { /* used for list itme title */
   padding: 5px 7px;
   font-size: 12px;
 
-  position: absolute;
+  position: fixed;
   top: 12px;
   right: 13px;
   color: #FFF;
@@ -481,4 +470,25 @@ div.wrap-btn{
 #simulate-other-drop {
   color: #9D9D9D;
   left:50%;
+}
+
+/* event */
+.event-block {
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.alert-info {
+  color: #555;
+  background-color: #EEE;
+  border-color: #CCC;
+  font-size: 15px;
+}
+
+.btn-feedback {
+  width: 120px;
+  height: 50px;
+  font-size: 30px;
 }
