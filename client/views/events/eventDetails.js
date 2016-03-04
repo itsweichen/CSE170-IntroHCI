@@ -9,15 +9,25 @@ Template.eventDetails.helpers({
 Template.eventDetails.events({
 	"click #cancel-event": function(){
         var eventId = FlowRouter.getParam("id");
-        Meteor.call('Events.methods.cancel', {id: eventId});
+        
+        var notificationId = Notifications.success('EVENT CANCELLED!');
+        Meteor.setTimeout(function(){
+            //FlowRouter.go("/my-meals");
+            Meteor.call('Events.methods.cancel', {id: eventId});
+            Notifications.remove({ _id: notificationId });
+        }, 500);
 	},
-	   'click .drop-meal-button': function(){
+	'click .drop-meal-button': function(){
         var eventId= FlowRouter.getParam("id");
+
+        var notificationId = Notifications.success('MEAL DROPPED!');
+        Meteor.setTimeout(function(){
+            Events.update({_id:eventId}, {$set: {status: 2}});
+            FlowRouter.reload();
+            Notifications.remove({ _id: notificationId });
+        }, 500);
+
         console.log(eventId);
-        Events.update({_id:eventId}, {$set: {status: 2}});
-        // var goUrl = "/event/"+eventId;
-        // console.log("goUrl:"+goUrl)
-        FlowRouter.reload();
    }
 });
 

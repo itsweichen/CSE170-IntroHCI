@@ -23,11 +23,12 @@ Template.postMeal.events({
             createdAt: new Date()
         });
 
-        // Clear form
-        event.target.mealName.value = "";
-        event.target.time.value = "";
+        var notificationId = Notifications.success('MEAL POSTED!');
+        Meteor.setTimeout(function(){
+            FlowRouter.go("/my-meals");
+            Notifications.remove({ _id: notificationId });
+        }, 500);
 
-        FlowRouter.go("/my-meals");
     },
     "click .upload-img": function (event) {
         console.log("upload btn clicked");

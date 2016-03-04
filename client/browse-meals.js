@@ -36,9 +36,15 @@ Template.browseMeals.events({
 });
 
 function callback_insert_event(error, result){
-	console.log("callback");
-	console.log(result);
+	// console.log("callback");
+	// console.log(result);
+
+    var notificationId = Notifications.success('THERE IS A MATCH!');
+    Meteor.setTimeout(function(){
+            FlowRouter.go("/event/" + result);
+            Notifications.remove({ _id: notificationId });
+        }, 1000);
 
 	// TODO: need to check if there is an error, later
-	FlowRouter.go("/event/" + result);
+	
 }

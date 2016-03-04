@@ -9,6 +9,11 @@ Template.dropWait.events({
 	},
 	"click #cancel-event": function(){
         var eventId = FlowRouter.getParam("id");
-        Meteor.call('Events.methods.cancel', {id: eventId});
+        var notificationId = Notifications.success('EVENT CANCELLED!');
+        Meteor.setTimeout(function(){
+            //FlowRouter.go("/my-meals");
+            Meteor.call('Events.methods.cancel', {id: eventId});
+            Notifications.remove({ _id: notificationId });
+        }, 500);
 	}
 });

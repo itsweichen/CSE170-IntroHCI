@@ -9,7 +9,7 @@ ul.notifications {
 
 li.notification.success {
     background-color: #000;
-    opacity: 0.5;
+    opacity: 0.4;
 
 	position: absolute;
     top: 50%;
@@ -18,7 +18,7 @@ li.notification.success {
     margin-left: -100px;
     width: 200px;
     height: 40px;
-    transform: translate(0%, 200%);
+    transform: translate(0%, 90%);
 }
 
 li.notification div.title {

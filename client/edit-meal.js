@@ -30,7 +30,11 @@ Template.editMeal.events({
 		var id = FlowRouter.getParam("id");
 		Meals.update({_id:id}, {$set: {name: name, time: time, location: location}});
 
-        FlowRouter.go("/my-meals");
+        var notificationId = Notifications.success('MEAL UPDATED!');
+        Meteor.setTimeout(function(){
+            FlowRouter.go("/my-meals");
+            Notifications.remove({ _id: notificationId });
+        }, 500);
     },
     "click #delete-meal": function (event) {
     	event.preventDefault();
