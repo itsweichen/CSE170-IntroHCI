@@ -4,3 +4,10 @@ Template.header.events({
     }
 });
 
+Template.header.helpers({
+	partnerId: function() {
+		var pid = FlowRouter.getParam("partner");
+		console.log(pid);
+		return pid;
+	}
+});
