@@ -1,6 +1,5 @@
 <template name="chat">
-	<div class="container event-detail">
-   <h2>Chatting with: {{ partnerId }} </h2>  
+	<div class="container event-detail" style="padding-top: 20px;">
 
     {{> message_list}}
 	
@@ -31,10 +30,12 @@
 
 <template name="message_list">
     <ul class="messages">
-        {{#each messages}}
-            <li>
-                <strong>{{username}}</strong> - {{text}} <br> <small>{{createdAt}}</small>
-            </li>
-        {{/each}}
+        <div class="row">
+            {{#each messages}}
+                <li style="padding-top:10px;">
+                    <strong>{{username}}</strong> - {{text}} <br> <small>{{createdAt}}</small>
+                </li>
+            {{/each}}
+        </div>
     </ul>
 </template>
