@@ -497,3 +497,9 @@ div.wrap-btn{
 #swipeRight > span, #swipeLeft > span {
   font-size: 35px;
 }
+
+#aboveFooter {
+  left: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
