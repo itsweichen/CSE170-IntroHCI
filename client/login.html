@@ -12,8 +12,15 @@
             <li data-target="#myCarousel" data-slide-to="4"></li>
           </ol>
 
+
+
             <div class="carousel-inner" role="listbox">
-                <div class="item active"><img src="images/intro1.jpg"/></div>
+                <div class="item active"><img src="images/intro1.jpg"/>
+                  <div class="container">
+
+                  </div>
+                </div>
+
                 <div class="item"><img src="images/intro2.jpg"/></div>
                 <div class="item"><img src="images/intro3.jpg"/></div>
                 <div class="item" id="intro4"><img src="images/intro4_1.jpg"/>
@@ -22,17 +29,21 @@
                 </div>
                 <div class="item" id="last"> <img src="images/intro5.jpg"/>
                           <div class="vertical-center">
-            <div class="container">
-                <div id="login-button">
-                    {{> loginButtons}}
-                </div>
-            </div>
+                          <div class="container">
+                              <div id="login-button">
+                                  {{> loginButtons}}
+                              </div>
+                          </div>
         </div>
 
 
                 </div>
             </div> <!-- carousel-inner -->
         </div> <!-- carousel slide -->
+
+        <div>
+          <button class="btn btn-skip" data-slide-to="4" data-target="#myCarousel">SKIP</button>
+        </div>
 
           <!-- Left and right controls -->
           <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

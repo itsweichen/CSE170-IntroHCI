@@ -521,3 +521,19 @@ div.wrap-btn{
 .carousel-indicators {
   top: 10px;
 }
+
+.btn-skip {
+  color: #ccc !important;
+  background-color: Transparent;
+  border-color: #ccc;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 8px;
+}
+
+.carousel-control {
+  background-image: none !important;
+  top: 20% !important;
+  bottom: 20% !important;
+}
