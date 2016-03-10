@@ -1,43 +1,54 @@
 <template name="postMeal">
-    <div class="container">
+
+    {{> notifications}}
+
+    <div class="form-page">
         <form id="post-meal-form" role="form">
-            <h3>Post a Meal</h3>
-            <div class="form-group">
-                <label for="name">Picture of your meal:</label>
-                <a>
-                    <div class="upload-img">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+
+            <div class="form-block">
+                <div class="form-group form-group-bottom">
+                    <label for="name">PICTURE</label>
+                    <a>
+                        <div class="upload-img">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </div>
+                    </a>
+                </div> <!-- form-group -->
+            </div>  <!-- form-block  -->
+
+                <div class="form-group row">
+                        <label for="mealName" class="col-xs-2 form-control-label">NAME</label>
+                    <div class="col-xs-10">
+                        <input type="text" class="form-control-modify" placeholder="Enter your meal name" name="mealName" required>
                     </div>
-                </a>
-                <!-- <span class="btn btn-default btn-file">
-                    Browse <input type="file">
-                </span> -->
-            </div>
-
-            <div class="form-group">
-                <label for="mealName">Name of your meal:</label>
-                <input type="text" class="form-control" placeholder="Meal name" name="mealName" required>
-            </div>
-
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                    <input type='text' class="form-control" name="time" placeholder="Choose the time you want to swap" required/>
                 </div>
-            </div>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker1').datetimepicker();
-                });
-            </script>
 
-			<div id="locationField" class="form-group">
-			  <input id="autocomplete" placeholder="Enter your address" type="text" class="form-control" name="address" required>
-			</div>
-			
-            <input type="submit" id="submitBtn" class="btn btn-default" value="Post your meal">
+
+
+                <div class="form-group row">
+                        <label for="time" class="col-xs-2 form-control-label">TIME</label>
+                    <div class='date col-xs-10'>
+                        <input type='text' class="form-control-modify" id='datetimepicker1' name="time" placeholder="Click to add your dropping time" required>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker1').datetimepicker();
+                    });
+                </script>
+
+                <div class="form-group row form-group-bottom">
+                    <label for="time" class="col-xs-2 form-control-label">PLACE</label>
+                    <div id="locationField" class="col-xs-10">
+                      <input id="autocomplete" placeholder="Enter your dropping address" type="text" class="form-control-modify" name="address" required>
+                    </div>
+                </div>
+            
+            <div class="wrap-btn">
+                <input type="submit" id="submitBtn" class="btn btn-primary btn-full-width" value="POST YOUR MEAL">
+            </div>
+
         </form>
     </div>
 </template>
