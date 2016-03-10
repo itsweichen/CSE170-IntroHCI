@@ -12,7 +12,8 @@ Accounts.onLogin(function() {
 
 Template.login.onRendered(function () {
 	this.$(".carousel").carousel({
-		interval: false
+		interval: false,
+    wrap: false
 	});
 
   $('#myCarousel').on('slide.bs.carousel', function (ev) {
@@ -26,19 +27,18 @@ Template.login.onRendered(function () {
   });
 
 
-    //$(function(){
-    console.log("swipe func loaded.");
-    //Enable swiping...
-    $(".carousel-inner").swipe( {
-            //Generic swipe handler for all directions
-            swipeLeft:function(event, direction, distance, duration, fingerCount) {
-              $(this).parent().carousel('prev'); 
-            },
-            swipeRight: function() {
-              $(this).parent().carousel('next'); 
-            }
-    });
-
+  //$(function(){
+  console.log("swipe func loaded.");
+  //Enable swiping...
+  $(".carousel-inner").swipe( {
+          //Generic swipe handler for all directions
+          swipeLeft:function(event, direction, distance, duration, fingerCount) {
+            $(this).parent().carousel('prev'); 
+          },
+          swipeRight: function() {
+            $(this).parent().carousel('next'); 
+          }
+  });
 
 
 });
