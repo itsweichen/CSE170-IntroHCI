@@ -23,9 +23,29 @@ Template.login.onRendered(function () {
         $("#login_intro4_3").delay(2000).animate({"opacity": "1"}, 700);
         $(".right").removeAttr("disabled");
     }
-  })
+  });
+
+
+    //$(function(){
+    console.log("swipe func loaded.");
+    //Enable swiping...
+    $(".carousel-inner").swipe( {
+            //Generic swipe handler for all directions
+            swipeLeft:function(event, direction, distance, duration, fingerCount) {
+              $(this).parent().carousel('prev'); 
+            },
+            swipeRight: function() {
+              $(this).parent().carousel('next'); 
+            }
+    });
+
+
 
 });
+
+
+
+
 
 /* trying to disable to right button
 Template.login.events({
@@ -40,9 +60,6 @@ Template.login.events({
           $(".right").delay(2000).removeAttr("disabled");
       }
     })
-    
-
-
 
       if ($(event.target).is("[disabled]")) {
         console.log("disable carousel right button");

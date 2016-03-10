@@ -65,4 +65,3 @@ Template.browseMeals.helpers({
 });
 
 
-
