@@ -1,7 +1,7 @@
 #login-button{
     position: absolute;
-    bottom: 40px;
-    left: 40px;
+    bottom: 10%;
+    left: 8%;
     z-index: 100;
 }
 .login-button{
@@ -502,4 +502,18 @@ div.wrap-btn{
   left: 0px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+/* login img */
+.carousel-inner {
+  position:fixed !important;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+.carousel-indicators {
+  top: 10px;
 }
