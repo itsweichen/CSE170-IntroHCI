@@ -508,7 +508,7 @@ div.wrap-btn{
   padding-right: 10px;
 }
 
-/* login img */
+/* login img 
 .carousel-inner {
   position:fixed !important;
   position:absolute;
@@ -518,9 +518,11 @@ div.wrap-btn{
   left:0;
 }
 
+
 .carousel-indicators {
   top: 10px;
 }
+*/
 
 .btn-skip {
   color: #ccc !important;

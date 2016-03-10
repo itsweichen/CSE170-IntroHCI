@@ -43,10 +43,6 @@ Template.login.onRendered(function () {
 
 });
 
-
-
-
-
 /* trying to disable to right button
 Template.login.events({
     "click .right": function (event) {
