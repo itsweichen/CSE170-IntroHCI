@@ -1,29 +1,25 @@
 <template name="chats">
     <div class="container">
     </div>
-        <ul class="list-group" style="padding-top: 20px;">
-
-            {{#each chats}}
-                {{#if handshake}}
-                    {{> chatitem}}
-                {{/if}}
-            {{/each}}
-
-        </ul>
-
+    <ul class="list-group" style="padding-top: 20px;">
+        {{#each chats}}
+            {{#if handshake}}
+                {{> chatitem}}
+            {{/if}}
+        {{/each}}
+    </ul>
 </template>
-
 
 <template name="chatitem">
     <a href={{pageUrl}} style="color:#000;">
-    <li class="list-group-item event">
-        <div class="row event">
-            <div class="col-xs-3"><img src={{myFoodImg}} class="img-responsive img-circle"></div>
-            <!-- <div class="col-xs-3"><img src={{partnerFoodImg}} class="img-responsive img-circle"></div> -->
-            <div class="col-xs-9">
-    		<h4>{{name}}</h4>
+        <li class="list-group-item event">
+            <div class="row event">
+                <div class="col-xs-3"><img src={{myFoodImg}} class="img-responsive img-circle"></div>
+                <!-- <div class="col-xs-3"><img src={{partnerFoodImg}} class="img-responsive img-circle"></div> -->
+                <div class="col-xs-9">
+                    <h4>{{name}}</h4>
+                </div>
             </div>
-        </div>
-    </li>
+        </li>
     </a>
 </template>

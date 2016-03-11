@@ -1,15 +1,4 @@
 <template name="finish">
-<!--         <div class="row">
-            <div class="col-xs-6 img-overlay-parent">
-                <img src="/images/food1.jpg" class="img-responsive">
-            </div>
-
-            <div class="col-xs-6 img-overlay-parent">
-                <img src="/images/home.jpg" class="img-responsive">
-            </div>
-        </div> -->
-
-
     {{> notifications}}
 
     <div class="event-block">
@@ -28,7 +17,7 @@
                 <div class="col-xs-2"></div>
                 <div class="col-xs-4 text-center">
                     <button type="button" class="btn btn-danger btn-feedback" id="disliked">
-                    <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
                     </button>
                 </div>
 
@@ -45,28 +34,22 @@
     <div class="event-block">
         <div class="container">
             <div class="alert alert-info" role="alert">
-                    <p>If you both ask to chat with the other person, we'll start a chat!</p>
-                </div>
+                <p>If you both ask to chat with the other person, we'll start a chat!</p>
+            </div>
 
             <div class="wrap-btn">
                 <button type="button" class="btn btn-warning btn-full-width" id="request-chat">
-                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-                Request Chat
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    Request Chat
                 </button>
             </div>
-
-            <!-- 
-            <div class="row">
-                <div class="col-xs-6"><img src="{{event.user1.image}}" class="img-responsive img-thumbnail"></div>
-                <div class="col-xs-6"><img src="{{event.user2.image}}" class="img-responsive img-thumbnail"></div>
-            </div> -->
-
         </div>  <!-- container -->
     </div> <!-- event-block -->
 
-
-
-     <div class="wrap-btn"><button type="button" class="btn btn-danger btn-event-action btn-full-width" id="cancel-event">Delete this event</button></div>
-
+    <div class="wrap-btn">
+        <button type="button" class="btn btn-danger btn-event-action btn-full-width" id="cancel-event">Delete this
+            event
+        </button>
+    </div>
 
 </template>

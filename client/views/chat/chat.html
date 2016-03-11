@@ -1,12 +1,12 @@
 <template name="chat">
-	<div class="container event-detail" style="padding-top: 20px;">
+    <div class="container event-detail" style="padding-top: 20px;">
 
-    {{> message_list}}
-	
-	  {{#if currentUser}}
-        {{> submit_text}}
-    {{/if}}
-	</div>
+        {{> message_list}}
+
+        {{#if currentUser}}
+            {{> submit_text}}
+        {{/if}}
+    </div>
 </template>
 
 <template name="submit_text">
@@ -16,15 +16,7 @@
             <span class="input-group-btn">
             <button type="submit" value="Submit" class="submit btn btn-default">Send</button>
             </span>
-
-<!--             <label for="addcomment"></label>
-            <input type="text" class="form-control" id="addcomment" placeholder="Add a comment">
-            <span class="input-group-btn commentsend">
-            <button type="submit" class="btn btn-default">Send</button>                
-                    </span> -->
         </div>
-
-
     </form>
 </template>
 
@@ -33,7 +25,8 @@
         <div class="row">
             {{#each messages}}
                 <li style="padding-top:10px;">
-                    <strong>{{username}}</strong> - {{text}} <br> <small>{{createdAt}}</small>
+                    <strong>{{username}}</strong> - {{text}} <br>
+                    <small>{{createdAt}}</small>
                 </li>
             {{/each}}
         </div>
