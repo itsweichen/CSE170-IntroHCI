@@ -16,15 +16,15 @@ Template.login.onRendered(function () {
     wrap: false
 	});
 
-  $('#myCarousel').on('slide.bs.carousel', function (ev) {
-    var id = ev.relatedTarget.id;
-    if (id == "intro4"){
-        $(".right").attr("disabled", "disabled");
-        $("#login_intro4_2").delay(1000).animate({"opacity": "1"}, 700);
-        $("#login_intro4_3").delay(2000).animate({"opacity": "1"}, 700);
-        $(".right").removeAttr("disabled");
-    }
-  });
+  // $('#myCarousel').on('slide.bs.carousel', function (ev) {
+  //   var id = ev.relatedTarget.id;
+  //   if (id == "intro4"){
+  //       $(".right").attr("disabled", "disabled");
+  //       $("#login_intro4_2").delay(1000).animate({"opacity": "1"}, 700);
+  //       $("#login_intro4_3").delay(2000).animate({"opacity": "1"}, 700);
+  //       $(".right").removeAttr("disabled");
+  //   }
+  // });
 
 
   //$(function(){
