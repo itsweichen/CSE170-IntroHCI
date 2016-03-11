@@ -20,7 +20,7 @@ Template.dropWait.events({
 
 Template.dropWait.helpers({
     event: function(){
-        //console.log(Events.findOne())
-        return Events.findOne()
+        var eventId = FlowRouter.getParam("id");
+        return Events.findOne({_id: eventId});
     }
 });

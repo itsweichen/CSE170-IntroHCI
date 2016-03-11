@@ -1,10 +1,11 @@
 Template.browseMeals.events({
     'click #swipeRight': function(){
     	// create an event and go to that event
-        var randomImgIndex = Math.floor(Math.random() * 5);
+        var randomImgIndex = Math.floor(Math.random() * 5) + 1;
         var img1 = '/images/food'+randomImgIndex+'.jpg';
-        var randomImgIndex2 = randomImgIndex + 1;
+        var randomImgIndex2 = (randomImgIndex + Math.floor(Math.random() * 3)) % 5 + 1;
         var img2 = '/images/food'+randomImgIndex2+'.jpg';
+        console.log("Meal1: " + img1 + " Meal2: "+img2);
     	Events.insert({
     		    user1: {
                     //userId:
@@ -62,6 +63,5 @@ Template.browseMeals.helpers({
         return Session.get("ranImgUrl");
     }
 });
-
 
 

@@ -1,12 +1,24 @@
 #login-button{
     position: absolute;
-    bottom: 40px;
-    left: 40px;
+    bottom: 10%;
+    left: 10%;
     z-index: 100;
+    width: 80%;
 }
+#login-buttons{
+    width: 100%;
+}
+.login-buttons-with-only-one-button{
+    width: 100%;
+}
+.login-text-and-button{
+    width: 100%;
+}
+
+
 .login-button{
     height: 50px;
-    width: 320px;
+    width: 100%;
 }
 .sign-in-text-facebook{
     font-size: 20px;
@@ -139,6 +151,10 @@ body {
   border-style: solid;
 }
 
+.bottomNav-active {
+  color: #FF912D !important;
+}
+
 /* buttons */
 .btn-circle {
   width: 50px;
@@ -159,7 +175,7 @@ body {
   border-radius: 50px;
 }
 #roundBtn{
-  padding-top: 50px;
+  padding-top: 8%;
 }
 
 .bottomIcon {
@@ -167,7 +183,7 @@ body {
 }
 
 .p-bottomNav {
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 0px;
   margin-top: -3px;
 }
@@ -488,7 +504,7 @@ div.wrap-btn{
 }
 
 .btn-feedback {
-  width: 120px;
+  width: 100px;
   height: 50px;
   font-size: 30px;
 }
@@ -496,4 +512,51 @@ div.wrap-btn{
 /* browsing */
 #swipeRight > span, #swipeLeft > span {
   font-size: 35px;
+}
+
+#aboveFooter {
+  left: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* login img 
+.carousel-inner {
+  position:fixed !important;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+
+.carousel-indicators {
+  top: 10px;
+}
+*/
+
+.btn-skip {
+  color: #ccc !important;
+  background-color: Transparent;
+  border-color: #ccc;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 8px;
+}
+
+.carousel-control {
+  background-image: none !important;
+  top: 20% !important;
+  bottom: 20% !important;
+}
+
+.res {
+    height: 100% !important;
+    width: 100%;
+  }
+
+#__blaze-root, #myCarousel, .carousel-inner, .item{
+  height: 100%;
 }

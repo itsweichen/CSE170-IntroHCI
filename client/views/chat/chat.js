@@ -1,3 +1,14 @@
+Template.chat.onRendered(function() {
+    var $footer = $('#bottomNav');
+    var $aboveFooter = $('#aboveFooter');
+    $aboveFooter.css("position", "fixed");
+    $aboveFooter.css('top', ($(window).height() - $footer.height() - $aboveFooter.height() - 10) + 'px');
+    console.log("footer");
+    console.log(( $(window).height() + $aboveFooter.height()) + 'px');
+});
+
+
+
 Template.message_list.helpers({
     messages: function () {
     var pid = FlowRouter.getParam("partner");

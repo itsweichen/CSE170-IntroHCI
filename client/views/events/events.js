@@ -14,7 +14,7 @@ Template.event.helpers({
 			return "You've already dropped! Waiting other to drop...";
 		}
 		else if (this.status == 3) {
-			return "Both dropped. Find theirs at";
+			return "Find their drop at";
 		}
 		else if (this.status == 4) {
 			return "Give feedback or Request chat!";

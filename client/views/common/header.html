@@ -15,11 +15,13 @@
                     <a href="/post-meal"><span class="glyphicon glyphicon-plus navbar-right"></span></a>
                 {{/if}}
                 {{#if isActiveRoute 'profile'}}<a href="#" class="navbar-title">PROFILE</a>{{/if}}
-                {{#if isActiveRoute 'chats'}}<a href="#" class="navbar-title">CHATS</a>{{/if}}
-                {{#if isActiveRoute 'events'}}<a href="#" class="navbar-title">EVENTS</a>{{/if}}
+                {{#if isActiveRoute 'chats'}}<a href="#" class="navbar-title">CHAT</a>{{/if}}
+                {{#if isActiveRoute 'events'}}<a href="#" class="navbar-title">MEAL TRADES</a>{{/if}}
                 {{#if isActiveRoute 'event'}}<a href="#" class="navbar-title">DETAILS</a>{{/if}}
                 {{#if isActiveRoute 'postMeal'}}<a href="#" class="navbar-title">POST MEAL</a>{{/if}}
                 {{#if isActiveRoute 'editMeal'}}<a href="#" class="navbar-title">EDIT MEAL</a>{{/if}}
+                {{#if isActiveRoute 'chat'}}<a href="#" class="navbar-title">{{ partnerId }}</a>{{/if}}
+
                 
               </div>
                 </nav>

@@ -12,18 +12,34 @@ Accounts.onLogin(function() {
 
 Template.login.onRendered(function () {
 	this.$(".carousel").carousel({
-		interval: false
+		interval: false,
+    wrap: false
 	});
 
-  $('#myCarousel').on('slide.bs.carousel', function (ev) {
-    var id = ev.relatedTarget.id;
-    if (id == "intro4"){
-        $(".right").attr("disabled", "disabled");
-        $("#login_intro4_2").delay(1000).animate({"opacity": "1"}, 700);
-        $("#login_intro4_3").delay(2000).animate({"opacity": "1"}, 700);
-        $(".right").removeAttr("disabled");
-    }
-  })
+  // $('#myCarousel').on('slide.bs.carousel', function (ev) {
+  //   var id = ev.relatedTarget.id;
+  //   if (id == "intro4"){
+  //       $(".right").attr("disabled", "disabled");
+  //       $("#login_intro4_2").delay(1000).animate({"opacity": "1"}, 700);
+  //       $("#login_intro4_3").delay(2000).animate({"opacity": "1"}, 700);
+  //       $(".right").removeAttr("disabled");
+  //   }
+  // });
+
+
+  //$(function(){
+  console.log("swipe func loaded.");
+  //Enable swiping...
+  $(".carousel-inner").swipe( {
+          //Generic swipe handler for all directions
+          swipeLeft:function(event, direction, distance, duration, fingerCount) {
+            $(this).parent().carousel('next'); 
+          },
+          swipeRight: function() {
+            $(this).parent().carousel('prev'); 
+          }
+  });
+
 
 });
 
@@ -40,9 +56,6 @@ Template.login.events({
           $(".right").delay(2000).removeAttr("disabled");
       }
     })
-    
-
-
 
       if ($(event.target).is("[disabled]")) {
         console.log("disable carousel right button");
