@@ -1,4 +1,4 @@
-Template.chat.onRendered(function() {
+Template.chat.onRendered(function () {
     var $footer = $('#bottomNav');
     var $aboveFooter = $('#aboveFooter');
     $aboveFooter.css("position", "fixed");
@@ -8,24 +8,23 @@ Template.chat.onRendered(function() {
 });
 
 
-
 Template.message_list.helpers({
     messages: function () {
-    var pid = FlowRouter.getParam("partner");
+        var pid = FlowRouter.getParam("partner");
 
-    return Messages.find({
-      $and: [
-        { partner: pid },
-        { owner: Meteor.userId() }
-      ]
-    });
+        return Messages.find({
+            $and: [
+                {partner: pid},
+                {owner: Meteor.userId()}
+            ]
+        });
     }
 });
 
 
 Template.chat.helpers({
     partnerId: function () {
-		var pid = FlowRouter.getParam("partner");
+        var pid = FlowRouter.getParam("partner");
         return pid;
     }
 });
@@ -37,17 +36,17 @@ Template.submit_text.events({
 
         // Get value from form element
         var msg = event.target.message.value;
-     	var pid = FlowRouter.getParam("partner");
-		
-		var theDate = new Date();
-	
+        var pid = FlowRouter.getParam("partner");
+
+        var theDate = new Date();
+
         // Insert a task into the collection
         Messages.insert({
             text: msg,
             createdAt: moment(theDate).calendar(),            // current time
             owner: Meteor.userId(),           // _id of logged in user
             username: Meteor.user().profile.name,  // username of logged in user
-			partner: pid
+            partner: pid
         });
 
 

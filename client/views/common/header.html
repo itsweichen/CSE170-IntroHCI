@@ -1,14 +1,14 @@
 <template name="header">
-	
-            {{#if isActiveRoute 'browseMeals'}}
-                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="navbar-header">
+
+    {{#if isActiveRoute 'browseMeals'}}
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
                 <a href="#" class="navbar-brand">MYSTERY MEET</a>
-                </div>
-                </nav>
-            {{else}}
-                <nav class="navbar navbar-default navbar-fixed-top navbar-inner" role="navigation">
-                <div class="navbar-header">
+            </div>
+        </nav>
+    {{else}}
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inner" role="navigation">
+            <div class="navbar-header">
                 <a id="backBtn"><span class="glyphicon glyphicon-menu-left"></span></a>
                 {{#if isActiveRoute 'my_meals'}}
                     <a href="#" class="navbar-title">MY MEALS</a>
@@ -21,15 +21,7 @@
                 {{#if isActiveRoute 'postMeal'}}<a href="#" class="navbar-title">POST MEAL</a>{{/if}}
                 {{#if isActiveRoute 'editMeal'}}<a href="#" class="navbar-title">EDIT MEAL</a>{{/if}}
                 {{#if isActiveRoute 'chat'}}<a href="#" class="navbar-title">{{ partnerId }}</a>{{/if}}
-
-                
-              </div>
-                </nav>
-            {{/if}}
-
-
-
-            
-	   
-	
+            </div>
+        </nav>
+    {{/if}}
 </template>

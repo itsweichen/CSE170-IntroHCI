@@ -1,6 +1,4 @@
 <template name="events">
-
-
     <!-- Upcoming -->
     <div class="container">
         <h3 style="color: #999;">UPCOMING & IN PROGRESS</h3>
@@ -13,19 +11,16 @@
         {{/each}}
     </ul>
 
-
     <!-- Past -->
     <div class="container">
         <h3 style="color: #999;">COMPLETED</h3>
     </div>
     <ul class="list-group">
-
         {{#each events}}
             {{#unless isUpcoming}}
                 {{> event}}
             {{/unless}}
         {{/each}}
-
     </ul>
 </template>
 
@@ -40,46 +35,78 @@
                 <div class="col-xs-3"><img src={{user2.image}} class="img-responsive event-item-img"></div>
                 <div class="col-xs-6 event-item-text">
 
-                <div id="crumbs">
-                    <ul>
-                        {{#if statusIs "1"}}
-                            <li><div class="highlight" ></div></li>
-                            <li><div></div></li>
-                            <li><div></div></li>
-                            <li><div></div></li>
-                        {{/if}}
+                    <div id="crumbs">
+                        <ul>
+                            {{#if statusIs "1"}}
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                                <li>
+                                    <div></div>
+                                </li>
+                                <li>
+                                    <div></div>
+                                </li>
+                                <li>
+                                    <div></div>
+                                </li>
+                            {{/if}}
 
-                        {{#if statusIs "2"}}
-                            <li><div class="highlight"></div></li>
-                            <li><div class="highlight" ></div></li>
-                            <li><div></div></li>
-                            <li><div></div></li>
-                        {{/if}}
+                            {{#if statusIs "2"}}
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                                <li>
+                                    <div></div>
+                                </li>
+                                <li>
+                                    <div></div>
+                                </li>
+                            {{/if}}
 
-                        {{#if statusIs "3"}}
-                            <li><div class="highlight"></div></li>
-                            <li><div class="highlight"></div></li>
-                            <li><div class="highlight" ></div></li>
-                            <li><div></div></li>
-                        {{/if}}
+                            {{#if statusIs "3"}}
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                                <li>
+                                    <div></div>
+                                </li>
+                            {{/if}}
 
-                        {{#if statusIs "4"}}
-                            <li><div class="highlight"></div></li>
-                            <li><div class="highlight"></div></li>
-                            <li><div class="highlight"></div></li>
-                            <li><div class="highlight" ></div></li>
-                        {{/if}}
+                            {{#if statusIs "4"}}
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                                <li>
+                                    <div class="highlight"></div>
+                                </li>
+                            {{/if}}
 
-                    </ul>
-                </div> 
+                        </ul>
+                    </div>
 
                     {{reminderText}}
                     <br>
                     {{#if showTime}}
-                    <b>{{time}}</b>
+                        <b>{{time}}</b>
                     {{/if}}
                     {{#if showLocation}}
-                    <b>({{location}})</b>
+                        <b>({{location}})</b>
                     {{/if}}
                     <!-- <p>Location: {{location}}</p> -->
                     <!--Todo: fix these:-->
