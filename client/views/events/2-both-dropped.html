@@ -3,7 +3,6 @@
 
     <button type="button" id="findMeal" class="btn btn-primary btn-navbar-right">PICKED UP</button>
 
-    
     <div class="event-block">
         <div class="container">
             <div class="alert alert-info" role="alert">
@@ -13,14 +12,13 @@
                 <div class="col-xs-4"><img src="{{event.user2.image}}" class="img-responsive img-thumbnail"></div>
                 <!-- <div class="col-xs-6"><img src="{{event.user2.image}}" class="img-responsive"></div> -->
                 <div class="col-xs-8">
-                    
                     <!-- <h4><small>TIME</small> <br> {{event.time}}</h4> -->
-                    <h4><small>LOCATION</small><br>Price Center, San Diego, CA 92037</h4>
+                    <h4>
+                        <small>LOCATION</small>
+                        <br>Price Center, San Diego, CA 92037
+                    </h4>
                 </div>
-
             </div>
-
-
             <br>
             <div class="row">
                 <iframe
@@ -34,12 +32,13 @@
         </div>  <!-- container -->
     </div> <!-- event-block -->
 
-    <div class="wrap-btn"><a href="/chat/mysterymeet"><button type="button" class="btn btn-warning btn-event-action btn-full-width">Cannot find</button></a></div>
+    <div class="wrap-btn"><a href="/chat/mysterymeet">
+        <button type="button" class="btn btn-warning btn-event-action btn-full-width">Cannot find</button>
+    </a></div>
 
-
-    <div class="wrap-btn"><button type="button" class="btn btn-danger btn-event-action btn-full-width" id="cancel-event">Cancel this event</button></div>
-
-
-
-
+    <div class="wrap-btn">
+        <button type="button" class="btn btn-danger btn-event-action btn-full-width" id="cancel-event">Cancel this
+            event
+        </button>
+    </div>
 </template>

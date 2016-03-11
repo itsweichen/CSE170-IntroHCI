@@ -1,6 +1,6 @@
 <template name="editMeal">
 
-        {{> notifications}}
+    {{> notifications}}
 
     <div class="form-page">
         <form id="edit-meal-form" role="form">
@@ -14,34 +14,37 @@
                 </div> <!-- form-group -->
             </div>  <!-- form-block  -->
 
-                <div class="form-group row">
-                        <label for="mealName" class="col-xs-2 form-control-label">NAME</label>
-                    <div class="col-xs-10">
-                        <input type="text" class="form-control-modify" placeholder="Enter your meal name" name="mealName" value={{name}} required>
-                    </div>
+            <div class="form-group row">
+                <label for="mealName" class="col-xs-2 form-control-label">NAME</label>
+                <div class="col-xs-10">
+                    <input type="text" class="form-control-modify" placeholder="Enter your meal name" name="mealName"
+                           value={{name}} required>
                 </div>
+            </div>
 
 
-                <div class="form-group row">
-                        <label for="time" class="col-xs-2 form-control-label">TIME</label>
-                    <div class='date col-xs-10'>
-                        <input type='text' class="form-control-modify" id='datetimepicker1' name="time" value={{time}} required>
-                    </div>
+            <div class="form-group row">
+                <label for="time" class="col-xs-2 form-control-label">TIME</label>
+                <div class='date col-xs-10'>
+                    <input type='text' class="form-control-modify" id='datetimepicker1' name="time"
+                           value={{time}} required>
                 </div>
+            </div>
 
-                <script type="text/javascript">
-                    $(function () {
-                        $('#datetimepicker1').datetimepicker();
-                    });
-                </script>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker();
+                });
+            </script>
 
-                <div class="form-group row form-group-bottom">
-                    <label for="time" class="col-xs-2 form-control-label">PLACE</label>
-                    <div id="locationField" class="col-xs-10">
-                      <input id="autocomplete" placeholder="Enter your dropping address" type="text" class="form-control-modify" name="address" value={{location}} required>
-                    </div>
+            <div class="form-group row form-group-bottom">
+                <label for="time" class="col-xs-2 form-control-label">PLACE</label>
+                <div id="locationField" class="col-xs-10">
+                    <input id="autocomplete" placeholder="Enter your dropping address" type="text"
+                           class="form-control-modify" name="address" value={{location}} required>
                 </div>
-            
+            </div>
+
             <div class="wrap-btn">
                 <input type="submit" id="submitBtn" class="btn btn-primary btn-full-width" value="UPDATE">
             </div>

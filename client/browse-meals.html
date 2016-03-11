@@ -1,21 +1,20 @@
 <template name="browseMeals">
 
     {{> notifications}}
-    <div class="container">
-        
-        <div class="card">
-            <!--<img src="http://lorempixel.com/400/400/food" class="card-image img-responsive center-block" />-->
 
+    <div class="container">
+        <div class="card">
             <img src={{homeImgUrl}} class="card-image img-responsive center-block" id="currentFood"/>
         </div>
 
-
         <div class="row" id="roundBtn">
             <div class="col-xs-6 text-center">
-                <button type="button" id="swipeLeft" class="btn btn-danger btn-circle btn-xl"><span class="glyphicon glyphicon-remove"></span></button>
+                <button type="button" id="swipeLeft" class="btn btn-danger btn-circle btn-xl"><span
+                        class="glyphicon glyphicon-remove"></span></button>
             </div>
             <div class="col-xs-6 text-center">
-                <button type="button" id="swipeRight" class="btn btn-success btn-circle btn-xl"><span class="glyphicon glyphicon-ok"></span></button>
+                <button type="button" id="swipeRight" class="btn btn-success btn-circle btn-xl"><span
+                        class="glyphicon glyphicon-ok"></span></button>
             </div>
         </div>
     </div> <!-- container -->
