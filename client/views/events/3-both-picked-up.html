@@ -1,55 +1,40 @@
 <template name="finish">
-    {{> notifications}}
+    <div class="container event-detail">
+        <div class="div-event-detail text-center">
+            <h3>Enjoy your meal, and let them know if you liked it!</h3>
+        </div>
 
-    <div class="event-block">
-        <div class="container">
-            <div class="alert alert-info" role="alert">
-                <p>Enjoy your meal, and let them know if you liked it!</p>
+        <div class="div-event-action text-center">
+            <button type="button" class="btn btn-success btn-event-action">
+                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                I liked this meal
+            </button>
+        </div>
+        <div class="div-event-action text-center">
+            <button type="button" class="btn btn-danger btn-event-action">
+                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                I disliked this meal
+            </button>
+        </div>
+
+        <div class="div-event-detail text-center">
+            <h3>If you both ask to chat with the other person, we'll start a chat!</h3>
+        </div>
+        <div class="div-event-action text-center">
+            <button type="button" class="btn btn-warning btn-event-action">
+                <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                Request Chat
+            </button>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 img-overlay-parent">
+                <img src="/images/food1.jpg" class="img-responsive">
             </div>
 
-            <div class="row" style="padding-bottom: 10px;">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-8"><img src="{{event.user2.image}}" class="img-responsive img-thumbnail"></div>
-                <div class="col-xs-2"></div>
+            <div class="col-xs-6 img-overlay-parent">
+                <img src="/images/home.jpg" class="img-responsive">
             </div>
-
-            <div class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-4 text-center">
-                    <button type="button" class="btn btn-danger btn-feedback" id="disliked">
-                        <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-                    </button>
-                </div>
-
-                <div class="col-xs-4 text-center">
-                    <button type="button" class="btn btn-success btn-feedback" id="liked">
-                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                    </button>
-                </div>
-                <div class="col-xs-2"></div>
-            </div> <!-- row -->
-        </div>  <!-- container -->
-    </div> <!-- event-block -->
-
-    <div class="event-block">
-        <div class="container">
-            <div class="alert alert-info" role="alert">
-                <p>If you both ask to chat with the other person, we'll start a chat!</p>
-            </div>
-
-            <div class="wrap-btn">
-                <button type="button" class="btn btn-warning btn-full-width" id="request-chat">
-                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-                    Request Chat
-                </button>
-            </div>
-        </div>  <!-- container -->
-    </div> <!-- event-block -->
-
-    <div class="wrap-btn">
-        <button type="button" class="btn btn-danger btn-event-action btn-full-width" id="cancel-event">Delete this
-            event
-        </button>
+        </div>
     </div>
-
 </template>

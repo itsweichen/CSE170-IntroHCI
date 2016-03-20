@@ -1,34 +1,28 @@
 <template name="chat">
-    <div class="container event-detail" style="padding-top: 20px;">
+	<div class="container event-detail">
+   <h2>Chatting with: {{ partnerId }} </h2>  
 
-        {{> message_list}}
-
-        {{#if currentUser}}
-            {{> submit_text}}
-        {{/if}}
-    </div>
+    {{> message_list}}
+	
+	  {{#if currentUser}}
+        {{> submit_text}}
+    {{/if}}
+	</div>
 </template>
 
 <template name="submit_text">
-    <form action="" class="message_form" id="aboveFooter">
-        <div class="input-group">
-            <input type="text" name="message" placeholder="Enter message" class="textbox form-control" required>
-            <span class="input-group-btn">
-            <button type="submit" value="Submit" class="submit btn btn-default">Send</button>
-            </span>
-        </div>
+    <form action="" class="message_form">
+        <input type="text" name="message" placeholder="Enter message" class="textbox form-control" required>
+        <input type="submit" value="Submit" class="submit btn btn-default">
     </form>
 </template>
 
 <template name="message_list">
     <ul class="messages">
-        <div class="row">
-            {{#each messages}}
-                <li style="padding-top:10px;">
-                    <strong>{{username}}</strong> - {{text}} <br>
-                    <small>{{createdAt}}</small>
-                </li>
-            {{/each}}
-        </div>
+        {{#each messages}}
+            <li>
+                <strong>{{username}}</strong> - {{text}} <br> <small>{{createdAt}}</small>
+            </li>
+        {{/each}}
     </ul>
 </template>

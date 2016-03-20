@@ -1,26 +1,23 @@
 <template name="dropWait">
-    {{> notifications}}
+    <div class="container event-detail">
+        <div class="div-event-detail text-center">
+            <h3>You dropped. Waiting for other to drop...</h3>
+        </div>
 
-    <div class="event-block">
-        <div class="container">
-            <div class="alert alert-info" role="alert">
-                <p>You've dropped! Waiting for the other person to drop their meal...</p>
+        <div class="row">
+            <div class="col-xs-6 img-overlay-parent">
+                <img src="/images/food1.jpg" class="img-responsive">
+                <div class="img-overlay text-center"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>
             </div>
 
-            <div class="row">
-                <div class="col-xs-6"><img src="{{event.user1.image}}" class="img-responsive img-thumbnail"></div>
-                <div class="col-xs-6"><img src="{{event.user2.image}}" class="img-responsive img-thumbnail"></div>
+            <div class="col-xs-6 img-overlay-parent">
+                <img src="/images/home.jpg" class="img-responsive">
+
             </div>
-        </div>  <!-- container -->
-    </div> <!-- event-block -->
+        </div>
 
-    <div class="wrap-btn">
-        <button type="button" class="btn btn-danger btn-event-action btn-full-width" id="cancel-event">Cancel this
-            event
-        </button>
-    </div>
+        <div class="div-event-action text-center"><button type="button" class="btn btn-danger btn-event-action" id="cancel-event">Cancel this event</button></div>
 
-    <div class="text-center">
-        <a href="#" id="simulate-other-drop"><u><h4>Simulate other person dropping their meal</h4></u></a>
+        <a href="#" id="simulate-other-drop"><p>simulate other person dropping</p></a>
     </div>
 </template>

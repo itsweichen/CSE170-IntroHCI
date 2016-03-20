@@ -1,27 +1,23 @@
 <template name="eventDetails">
-    {{> notifications}}
-
-    <button type="button" id="drop-meal-button" class="btn btn-primary btn-navbar-right">DROPPED</button>
-
-    <div class="event-block">
-        <div class="container">
-            <div class="alert alert-info" role="alert">
-                <p>Drop your meal at the time and location below.</p>
+    <div class="container event-detail">
+            <div class="div-event-detail text-center">
+                <h3>Drop your meal at the time and location below</h3>
             </div>
+            
+            <div class="div-event-action text-center">
+                <button type="button" class="btn btn-primary btn-event-action drop-meal-button">I dropped my meal</button>
+            </div>
+
             <div class="row">
-                <div class="col-xs-4"><img src="{{event.user1.image}}" class="img-responsive img-thumbnail"></div>
-                <!-- <div class="col-xs-6"><img src="{{event.user2.image}}" class="img-responsive"></div> -->
-                <div class="col-xs-8">
-
-                    <h4>
-                        <small>TIME</small>
-                        <br> {{event.time}}</h4>
-                    <h4>
-                        <small>LOCATION</small>
-                        <br> {{event.location}}</h4>
-                </div>
+                <div class="col-xs-6"><img src="{{event.user1.image}}" class="img-responsive"></div>
+                <div class="col-xs-6"><img src="{{event.user2.image}}" class="img-responsive"></div>
             </div>
-            <br>
+
+            <div class="div-event-detail text-center">
+                <h3><small>Time</small> <br> {{event.time}}</h3>
+                <h3><small>Location</small> <br> {{event.location}}</h3>
+            </div>
+
             <div class="row">
                 <iframe
                         width="100%"
@@ -31,12 +27,7 @@
                     &q=UCSD" allowfullscreen>
                 </iframe>
             </div>
-        </div>  <!-- container -->
-    </div> <!-- event-block -->
 
-    <div class="wrap-btn">
-        <button type="button" class="btn btn-danger btn-event-action btn-full-width" id="cancel-event">Cancel this
-            event
-        </button>
+            <div class="div-event-action text-center"><button type="button" class="btn btn-danger btn-event-action" id="cancel-event">Cancel this event</button></div>
     </div>
 </template>
